@@ -2,6 +2,8 @@
 
 Luxury multilingual digital museum (Arabic, English, French) celebrating Bahraini equestrian heritage and endurance riding.
 
+**Live site:** [https://uncletim.horse](https://uncletim.horse)
+
 ## Stack
 
 - Next.js 16 (App Router)
@@ -18,16 +20,14 @@ cp .env.example .env.local
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) — visitors are redirected to `/ar` by default.
+Local development serves on your machine; SEO metadata, sitemap, robots, and structured data always use **https://uncletim.horse**.
 
 ## Environment variables
 
-| Variable | Required | Notes |
+| Variable | Required | Value |
 |---|---|---|
-| `NEXT_PUBLIC_SITE_URL` | Production | Public site origin, e.g. `https://your-domain.com` |
-| `GOOGLE_SITE_VERIFICATION` | Optional | Google Search Console verification token |
-
-On Vercel, if `NEXT_PUBLIC_SITE_URL` is unset, the app falls back to `VERCEL_PROJECT_PRODUCTION_URL` / `VERCEL_URL`.
+| `NEXT_PUBLIC_SITE_URL` | Production | `https://uncletim.horse` |
+| `GOOGLE_SITE_VERIFICATION` | Optional | Search Console HTML tag token |
 
 ## Scripts
 
@@ -41,12 +41,15 @@ npm run start  # serve production build
 ## Deploy on Vercel
 
 1. Import the GitHub repository into Vercel (Framework Preset: **Next.js**).
-2. Set `NEXT_PUBLIC_SITE_URL` to your production domain.
-3. Optionally set `GOOGLE_SITE_VERIFICATION`.
-4. Deploy — Build Command `next build`, Install Command `npm install`, leave Output Directory empty.
+2. Set `NEXT_PUBLIC_SITE_URL` = `https://uncletim.horse`.
+3. Attach the custom domain `uncletim.horse`.
+4. Optionally set `GOOGLE_SITE_VERIFICATION`.
+5. Deploy — Build Command `next build`, Install Command `npm install`, leave Output Directory empty.
 
-SEO routes available after deploy:
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for the full checklist.
 
-- `/sitemap.xml`
-- `/robots.txt`
+SEO routes after deploy:
+
+- https://uncletim.horse/sitemap.xml
+- https://uncletim.horse/robots.txt
 - Locale pages: `/ar`, `/en`, `/fr`

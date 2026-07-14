@@ -163,7 +163,7 @@ export async function generateMetadata({
       alternateLocale: routing.locales
         .filter((code) => code !== locale)
         .map((code) => OG_LOCALE[code]),
-      url: `/${locale}`,
+      url: `${siteUrl}/${locale}`,
       title: t("ogTitle"),
       description: t("ogDescription"),
       siteName: title,
@@ -188,7 +188,7 @@ export async function generateMetadata({
       ],
     },
     alternates: {
-      canonical: `/${locale}`,
+      canonical: `${siteUrl}/${locale}`,
       languages: buildLanguageAlternates(),
     },
     verification: googleVerification

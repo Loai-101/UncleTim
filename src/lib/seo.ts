@@ -1,17 +1,15 @@
 import { routing, type AppLocale } from "@/i18n/routing";
 import { CONTACT, SITE_LOGO, SITE_NAME, SITE_SHORT_NAME } from "@/lib/constants";
 
-/** Production site origin. Override with NEXT_PUBLIC_SITE_URL in deployment. */
+/** Canonical production origin — used for SEO, sitemap, OG, schema, hreflang. */
+export const SITE_URL = "https://uncletim.horse" as const;
+
+/**
+ * Always returns the production domain for SEO/sitemap/schema.
+ * Preview and local hosts are never emitted in crawler-facing URLs.
+ */
 export function getSiteUrl(): string {
-  const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "");
-  if (fromEnv) return fromEnv;
-  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
-    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
-  }
-  if (process.env.VERCEL_URL) {
-    return `https://${process.env.VERCEL_URL}`;
-  }
-  return "http://localhost:3000";
+  return SITE_URL;
 }
 
 export function getLocalePath(locale: string, path = ""): string {
@@ -95,13 +93,15 @@ export const OG_LOCALE: Record<AppLocale, string> = {
   fr: "fr_FR",
 };
 
+/** Absolute hreflang / alternate language URLs for the production domain. */
 export function buildLanguageAlternates(path = ""): Record<string, string> {
   const normalized = path.startsWith("/") ? path : path ? `/${path}` : "";
+  const base = getSiteUrl();
   const languages: Record<string, string> = {
-    "x-default": `/${routing.defaultLocale}${normalized}`,
+    "x-default": `${base}/${routing.defaultLocale}${normalized}`,
   };
   for (const locale of routing.locales) {
-    languages[locale] = `/${locale}${normalized}`;
+    languages[locale] = `${base}/${locale}${normalized}`;
   }
   return languages;
 }
