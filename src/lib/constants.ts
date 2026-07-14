@@ -6,7 +6,7 @@ export const SITE_MONOGRAM = "UT";
 export const SITE_LOGO =
   "https://res.cloudinary.com/dvybb2xnc/image/upload/e_background_removal/e_trim/f_png/v1783944409/WhatsApp_Image_2026-07-13_at_3.03.51_PM_jwjtxm.jpg";
 
-export const LOCALES = ["en", "ar", "fr"] as const;
+export const LOCALES = ["ar", "en", "fr"] as const;
 export type LocaleCode = (typeof LOCALES)[number];
 
 export const SECTION_IDS = {
