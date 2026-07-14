@@ -2,23 +2,14 @@ import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
-import { SocialIcon } from "@/components/layout/SocialIcons";
 import { navigationItems } from "@/data/navigation";
 import {
   CONTACT,
   SITE_LOGO,
   SITE_SHORT_NAME,
-  SOCIAL,
   SECTION_IDS,
 } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-
-const socialLinks = [
-  { href: SOCIAL.instagram, label: "Instagram", network: "instagram" as const },
-  { href: SOCIAL.facebook, label: "Facebook", network: "facebook" as const },
-  { href: SOCIAL.youtube, label: "YouTube", network: "youtube" as const },
-  { href: SOCIAL.twitter, label: "X", network: "twitter" as const },
-];
 
 const QUICK_SECTION_IDS: ReadonlySet<string> = new Set([
   SECTION_IDS.home,
@@ -130,7 +121,7 @@ export async function Footer({ className }: FooterProps) {
             </ul>
           </div>
 
-          {/* Contact + social */}
+          {/* Contact */}
           <div className="space-y-6 lg:col-span-4">
             <div>
               <h2 className="mb-4 text-[0.6875rem] font-medium tracking-[0.22em] text-luxury-gold uppercase">
@@ -191,31 +182,6 @@ export async function Footer({ className }: FooterProps) {
                     </a>
                   </li>
                 )}
-              </ul>
-            </div>
-
-            <div>
-              <h2 className="mb-3 text-[0.6875rem] font-medium tracking-[0.22em] text-luxury-gold uppercase">
-                {tFooter("follow")}
-              </h2>
-              <ul className="flex items-center gap-3">
-                {socialLinks.map(({ href, label, network }) => (
-                  <li key={label}>
-                    <a
-                      href={href}
-                      target={href.startsWith("http") ? "_blank" : undefined}
-                      rel={
-                        href.startsWith("http")
-                          ? "noopener noreferrer"
-                          : undefined
-                      }
-                      aria-label={label}
-                      className="inline-flex size-9 items-center justify-center border border-luxury-gold/35 text-luxury-gold transition-colors hover:border-luxury-gold hover:bg-deep-red hover:text-soft-gold"
-                    >
-                      <SocialIcon network={network} className="size-4" />
-                    </a>
-                  </li>
-                ))}
               </ul>
             </div>
 

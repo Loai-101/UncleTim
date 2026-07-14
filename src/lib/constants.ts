@@ -31,11 +31,3 @@ export const CONTACT: ContactInfo = {
   website: "https://it-solutions.pmi-me.net/",
   websiteLabel: "PMI IT Solutions",
 };
-
-// TODO Phase 2: Replace with verified social profiles.
-export const SOCIAL = {
-  instagram: "#",
-  twitter: "#",
-  facebook: "#",
-  youtube: "#",
-} as const;
