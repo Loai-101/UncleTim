@@ -1,0 +1,418 @@
+{
+  "metadata": {
+    "title": "Abdulrahman Al Bastaki | Musée Numérique du Patrimoine Équestre de Bahreïn",
+    "description": "Musée numérique d’Abdulrahman Al Bastaki (Oncle Tim) — patrimoine équestre de Bahreïn, endurance équestre, équipe royale d’endurance, chevaux arabes et héritage d’un entraîneur bahreïnien.",
+    "ogTitle": "Abdulrahman Al Bastaki | Musée Numérique du Patrimoine Équestre de Bahreïn",
+    "ogDescription": "Abdulrahman Al Bastaki — Oncle Tim. Découvrez le patrimoine équestre de Bahreïn, l’endurance équestre et un musée numérique dédié à cet héritage.",
+    "keywords": "Abdulrahman Al Bastaki, Patrimoine Équestre de Bahreïn, Endurance Équestre Bahreïn, Musée Équestre Numérique, Cavalier Bahreïn, Oncle Tim, Abdulrahman Albastaki, chevaux arabes Bahreïn",
+    "breadcrumbHome": "Accueil",
+    "heroImageAlt": "Abdulrahman Al Bastaki Oncle Tim — portrait d’archives de l’entraîneur d’endurance et du patrimoine équestre de Bahreïn"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "featured": "Vedette",
+    "profile": "Profil",
+    "mediaCenter": "Centre média",
+    "achievements": "Réalisations",
+    "biography": "Dévouement",
+    "timeline": "Chronologie",
+    "legacy": "Moments",
+    "gallery": "Galerie",
+    "newspapers": "Médias",
+    "certifications": "Prix",
+    "royalConnections": "Royal",
+    "contact": "Contact",
+    "secondaryNav": "Sections du site",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "language": "Langue",
+    "skipToContent": "Aller au contenu"
+  },
+  "hero": {
+    "eyebrow": "Équipe royale bahreïnie d’endurance",
+    "title": "Abdulrahman Al Bastaki",
+    "subtitle": "Oncle Tim",
+    "tagline": "Un héritage écrit à travers les chevaux",
+    "role": "Entraîneur et groom de chevaux d’endurance",
+    "ctaPrimary": "Explorer l’héritage",
+    "ctaSecondary": "Voir la chronologie",
+    "scroll": "Défiler",
+    "slideLabel": "Diapositive {current} sur {total}"
+  },
+  "featuredSlider": {
+    "ariaLabel": "Carrousel d’images d’archives en vedette",
+    "title": "Archives en vedette",
+    "slides": {
+      "featured-01": {
+        "title": "Le Premier Cavalier",
+        "subtitle": "Une vision royale au service de l’endurance",
+        "imageAlt": "Poignée de main lors d’un événement d’endurance avec des cavaliers bahreïnis et des personnalités royales"
+      },
+      "featured-02": {
+        "title": "Source d’Inspiration",
+        "subtitle": "Sur la voie de la victoire",
+        "imageAlt": "Deux hommes souriant ensemble lors d’un rassemblement équestre, l’un portant une veste rouge Victorious"
+      },
+      "featured-03": {
+        "title": "Bâtisseur de Gloire",
+        "subtitle": "Un Parcours de Leadership et de Réussite",
+        "imageAlt": "Mentor avec un cavalier de l’équipe d’endurance de Bahreïn et un cheval en extérieur"
+      },
+      "featured-04": {
+        "title": "Il a tracé la voie et guidé la marche",
+        "subtitle": "Vers la gloire et la réussite",
+        "imageAlt": "Remise d’un cadeau de nuit entre membres de l’équipe de Bahreïn"
+      },
+      "featured-05": {
+        "title": "Hommage à Nos Leaders",
+        "subtitle": "Qui ont cru au succès avant sa réalisation",
+        "imageAlt": "Échange de cadeau de nuit en hommage aux leaders lors d’un rassemblement équestre"
+      },
+      "featured-06": {
+        "title": "Fiers Ambassadeurs de Bahreïn",
+        "subtitle": "Portant son drapeau partout",
+        "imageAlt": "Médaillés bahreïnis drapés du drapeau national lors d’une célébration en extérieur"
+      },
+      "featured-07": {
+        "title": "Nous N’avons Épargné Aucun Effort",
+        "subtitle": "Pour Représenter Notre Patrie avec Fierté",
+        "imageAlt": "Membres de l’équipe avec des chevaux blancs dans un champ ensoleillé, fiers représentants de Bahreïn"
+      },
+      "featured-08": {
+        "title": "Entre le Passé et le Présent",
+        "subtitle": "La Confiance des Leaders a Façonné Notre Parcours",
+        "imageAlt": "Leaders en tenue traditionnelle avec des athlètes médaillés dans un majlis"
+      }
+    }
+  },
+  "dashboard": {
+    "eyebrow": "L’héritage en un coup d’œil",
+    "title": "Une vie de dévouement",
+    "subtitle": "Depuis plus de cinq décennies, l’équitation est bien plus qu’un sport : elle représente un mode de vie ainsi qu’un parcours continu d’apprentissage, de dévouement et de réussite. Cette histoire a commencé à Bahreïn dans les années 1970 et, au fil du temps, l’expérience acquise s’est transformée en un riche héritage couvrant l’entraînement des chevaux, la gestion des écuries, l’endurance équestre et le développement de l’équitation. Entre le passé et le présent, un objectif est resté inchangé : servir le cheval, former les cavaliers et représenter la nation avec fierté sur les scènes nationales et internationales. Aujourd’hui, ce parcours fait partie intégrante de l’histoire de l’excellence équestre dans la région et bien au-delà.",
+    "yearsExperience": "Années d’Expérience",
+    "yearsExperienceDesc": "Plus de cinq décennies consacrées au monde équestre.",
+    "milestones": "Étapes Historiques",
+    "milestonesDesc": "Un parcours riche en réalisations et souvenirs marquants.",
+    "intlCerts": "Certifications Internationales",
+    "intlCertsDesc": "Formations et qualifications obtenues à l’international.",
+    "regionalCerts": "Certifications Régionales",
+    "regionalCertsDesc": "Expertise reconnue par des organismes spécialisés de la région.",
+    "royalEvents": "Participations avec l’Équipe Royale",
+    "royalEventsDesc": "Représentation de Bahreïn lors d’événements prestigieux.",
+    "championships": "Titres et Championnats",
+    "championshipsDesc": "Succès obtenus sur les scènes nationale et internationale.",
+    "countries": "Pays Visités",
+    "countriesDesc": "Voyages dédiés à l’apprentissage et à l’échange d’expertise.",
+    "horsesTrained": "Chevaux Entraînés",
+    "horsesTrainedDesc": "Préparation et développement de centaines de chevaux au fil des années."
+  },
+  "timeline": {
+    "eyebrow": "Parcours historique",
+    "title": "Chronologie interactive de l’héritage",
+    "subtitle": "Des années 1970 à aujourd’hui — un parcours de passion et d’expérience ayant contribué à bâtir un héritage durable à travers les générations de l’équitation et de l’endurance.",
+    "filterAll": "Toutes les décennies",
+    "decadeLabel": "Ère {decade}",
+    "readMore": "Voir les détails",
+    "location": "Lieu",
+    "category": "Catégorie",
+    "events": {
+      "tl-1970s-01": {
+        "title": "Années 1970 – Le Début de l’Histoire",
+        "description": "Tout a commencé par une passion sincère pour les chevaux : les monter, les soigner et apprendre à leurs côtés. Cette passion allait devenir un héritage consacré à l’équitation et à l’endurance.",
+        "location": "Royaume de Bahreïn",
+        "category": "Début de carrière",
+        "badge": "Ouverture d’ère",
+        "imageAlt": "Photographies d’archives — premières années équestres à Bahreïn dans les années 1970"
+      },
+      "tl-1970s-02": {
+        "title": "Service Communautaire et Actions Caritatives",
+        "description": "En tant que Bahreïniens fiers de notre identité, le soutien aux associations caritatives et la participation aux initiatives humanitaires ont toujours fait partie de notre parcours, au service de la société au-delà du monde équestre.",
+        "location": "Royaume de Bahreïn",
+        "category": "Service communautaire",
+        "imageAlt": "Photographies d’archives — randonnée caritative et équitation communautaire à Bahreïn en 1975"
+      },
+      "tl-1980s-01": {
+        "title": "Années 1980 – Jockey Apprenti",
+        "description": "Au début des années 1980, la passion est devenue un véritable engagement. La licence de jockey apprenti a marqué la première étape officielle d’un parcours consacré à l’apprentissage, à l’expérience et à la réussite.",
+        "category": "Développement",
+        "quote": "Chaque grand parcours commence par un premier pas.",
+        "imageAlt": "Licence de jockey apprenti du Club équestre et de courses hippiques de Bahreïn, 1980–1981"
+      },
+      "tl-1980s-02": {
+        "title": "Pionnier du Style Cowboy à Bahreïn",
+        "description": "En 1984, il fut parmi les premiers à introduire l’équitation western et la culture cowboy à Bahreïn, avec un équipement complet représentant ce style unique à une époque où il était encore peu connu dans la région.",
+        "location": "Saar, Royaume de Bahreïn",
+        "category": "Événements",
+        "imageAlt": "Photographies d’archives — pionnier de l’équitation cowboy western à Saar, Bahreïn, 1984"
+      },
+      "tl-1990s-01": {
+        "title": "Stages Internationaux d’Entraînement",
+        "description": "Les années 1990 ont marqué le début d’une nouvelle étape de développement et d’apprentissage à travers des stages d’entraînement internationaux, commencés en Suisse puis étendus à plusieurs pays européens. Cette expérience a permis d’acquérir de nouvelles connaissances et une vision plus large du monde équestre.",
+        "location": "Suisse – Europe",
+        "category": "Patrimoine",
+        "quote": "La véritable expérience commence au-delà des horizons familiers.",
+        "imageAlt": "Photographies d’archives — stages d’entraînement équestre internationaux en Suisse et en Europe dans les années 1990"
+      },
+      "tl-1990s-02": {
+        "title": "Transfert de l’Expertise Internationale à Bahreïn",
+        "description": "Après plusieurs années d’expérience acquise à l’international, une nouvelle étape a consisté à introduire les meilleures pratiques équestres mondiales à Bahreïn grâce à la création de l’un des premiers centres spécialisés en équitation et en saut d’obstacles selon les normes internationales. Al Zubara fut le point de départ de cette vision, le centre devenant l’un des pionniers dans l’organisation de compétitions et la formation de nouvelles générations de cavaliers.",
+        "location": "Al Zubara, Royaume de Bahreïn",
+        "category": "Reconnaissance",
+        "imageAlt": "Photographies d’archives et coupures de presse — centre équestre d’Al Zubara et compétitions de saut d’obstacles à Bahreïn dans les années 1990"
+      },
+      "tl-1990s-03": {
+        "title": "École d’Équitation de Saar",
+        "description": "L’École d’Équitation de Saar a représenté une étape importante dans le développement des sports équestres à Bahreïn. Créée selon des normes internationales, elle disposait d’installations spécialisées pour l’enseignement de l’équitation, le saut d’obstacles et l’endurance. L’école a également accueilli des experts et entraîneurs internationaux de renom, dont plusieurs figures de référence dans le domaine du saut d’obstacles. Elle a contribué à former de nombreux cavaliers devenus aujourd’hui des noms reconnus du milieu équestre bahreïni.",
+        "location": "Saar, Royaume de Bahreïn",
+        "category": "Championnats",
+        "imageAlt": "Photographies d’archives et presse — École d’équitation de Saar, compétitions et entraînement à Bahreïn en 1998"
+      },
+      "tl-2000s-01": {
+        "title": "Intégration à l’Équipe Royale de Bahreïn",
+        "description": "Cette période a marqué l’intégration à l’Équipe Royale de Bahreïn en tant qu’entraîneur, ouvrant un nouveau chapitre consacré à la représentation du Royaume et au développement des sports équestres et de l’endurance aux plus hauts niveaux nationaux et internationaux.",
+        "location": "Royaume de Bahreïn",
+        "category": "Évolution professionnelle",
+        "quote": "Représenter son pays est un honneur, construire le succès est une responsabilité.",
+        "imageAlt": "Photographies d’archives — intégration à l’Équipe Royale d’endurance de Bahreïn en tant qu’entraîneur dans les années 2000"
+      },
+      "tl-2000s-02": {
+        "title": "Le Début d’une Ère de Réussites avec l’Équipe Royale",
+        "description": "Cette période a marqué le début d’une série de succès avec l’Équipe Royale de Bahreïn, aussi bien sur le plan national qu’international. Abdulrahman Al Bastaki s’est imposé comme l’une des figures majeures de l’endurance équestre, alliant l’expérience du cavalier à la vision de l’entraîneur, et s’est distingué lors de nombreuses compétitions régionales et internationales.",
+        "location": "Compétitions Internationales",
+        "category": "International",
+        "quote": "La véritable réussite ne se mesure pas à une seule course, mais à un parcours d’accomplissements continus.",
+        "imageAlt": "Photographies d’archives — succès de l’Équipe Royale de Bahreïn en endurance et entraînement, 2005"
+      },
+      "tl-2010s-01": {
+        "title": "Une Décennie de Succès et de Médailles",
+        "description": "Cette carrière ne s’est pas construite uniquement sur l’expérience, la formation et la participation, mais également sur les résultats et les victoires. Au cours de cette décennie, Abdulrahman Al Bastaki est monté sur de nombreux podiums nationaux et internationaux, s’illustrant à la fois comme cavalier et entraîneur, et renforçant sa place parmi les figures majeures de l’endurance équestre.",
+        "location": "Bahreïn et scènes internationales",
+        "category": "Ère contemporaine",
+        "quote": "L’or n’est pas le but du parcours, mais le fruit d’années de dévouement.",
+        "imageAlt": "Photographies d’archives — podiums et succès dorés en endurance durant les années 2010"
+      },
+      "tl-2010s-02": {
+        "title": "Courses Plates et Échange d’Expériences",
+        "description": "Au cours de cette période, Abdulrahman Al Bastaki a maintenu une présence active dans les compétitions de courses plates et les événements équestres. Ces participations lui ont permis d’échanger son expérience avec des entraîneurs et cavaliers de différents pays, enrichissant ainsi ses connaissances et renforçant son expertise dans le domaine équestre.",
+        "location": "Bahreïn et scènes internationales",
+        "category": "Événements royaux",
+        "quote": "Le succès commence par l’apprentissage continu et le partage des expériences.",
+        "imageAlt": "Photographies d’archives — courses plates et échange d’expériences sur les scènes internationales, 2014"
+      },
+      "tl-2010s-03": {
+        "title": "Confiance Royale et Excellence Équestre",
+        "description": "Le rôle d'Abdulrahman Al Bastaki ne se limitait pas à l'entraînement et aux participations internationales. Grâce à sa vaste expérience et à ses compétences reconnues, il a bénéficié de la confiance de la Cour Royale pour préparer et entraîner les chevaux montés par Sa Majesté le Roi Hamad bin Isa Al Khalifa, Roi du Royaume de Bahreïn. Parmi les chevaux qu'il a entraînés figure « Haji Baik », offert par le Président Vladimir Poutine à Sa Majesté le Roi Hamad bin Isa Al Khalifa en 2016.",
+        "location": "Royaume de Bahreïn",
+        "category": "Confiance royale",
+        "quote": "La confiance royale se construit par l’expertise, l’engagement et les résultats.",
+        "imageAlt": "Photographies d’archives — entraînement des chevaux royaux et présentation de Haji Baik, 2016"
+      },
+      "tl-2020s-01": {
+        "year": "Aujourd’hui",
+        "title": "Transmission du Savoir et Développement des Générations Futures",
+        "description": "Le parcours d'Abdulrahman Al Bastaki ne s'est pas limité aux compétitions et aux réalisations sportives. Il a voyagé dans de nombreux pays et centres équestres spécialisés, non pas uniquement pour découvrir de nouveaux horizons, mais surtout pour acquérir de nouvelles compétences, enrichir son expérience et s'inspirer des meilleures pratiques internationales. Aujourd'hui, il continue de transmettre ces connaissances au Royaume de Bahreïn et de contribuer au développement des futures générations de cavaliers.",
+        "location": "Bahreïn et le monde",
+        "category": "Aujourd’hui",
+        "quote": "L’apprentissage est un voyage sans fin, et la véritable expérience se mesure à sa transmission aux autres.",
+        "imageAlt": "Photographies d’archives — transmission du savoir équestre et développement des générations futures"
+      },
+      "tl-2020s-02": {
+        "title": "Formation de Membres de la Famille Royale",
+        "description": "Abdulrahman Al Bastaki a eu l’honneur de former plusieurs membres de la famille royale, notamment des fils de Son Altesse Cheikh Khalid bin Hamad Al Khalifa et de Son Altesse Cheikh Nasser bin Hamad Al Khalifa, ainsi que plusieurs personnalités et hauts responsables. Cette reconnaissance témoigne de la confiance qu’il a su gagner grâce à son expérience, son engagement et sa capacité à développer les compétences des cavaliers selon les plus hauts standards professionnels.",
+        "location": "Royaume de Bahreïn",
+        "category": "Reconnaissance",
+        "quote": "La confiance se gagne par l’expérience et se confirme par les réalisations.",
+        "imageAlt": "Photographie d’archives — formation de jeunes cavaliers royaux et distingués à Bahreïn, 2022"
+      },
+      "tl-2020s-03": {
+        "year": "Héritage",
+        "title": "Un Héritage Équestre Qui Se Poursuit",
+        "description": "Abdulrahman Al Bastaki poursuit aujourd’hui son engagement au service de l’équitation bahreïnienne en tant qu’entraîneur au sein de l’équipe royale aux Écuries Al Fursan, s’appuyant sur plusieurs décennies d’expérience et de dévouement. Selon lui, le Royaume de Bahreïn a toujours été et demeure l’un des pays pionniers dans le domaine du cheval et des sports équestres, une vision établie par Sa Majesté le Roi Hamad bin Isa Al Khalifa.\n\nCette excellence s’est développée sous la direction de Son Altesse Cheikh Nasser bin Hamad Al Khalifa, de Son Altesse Cheikh Khalid bin Hamad Al Khalifa et de Son Altesse Cheikha Noora bint Hamad Al Khalifa, qui ont contribué au rayonnement international de Bahreïn dans les disciplines équestres. Le soutien constant de Son Altesse Royale le Prince Salman bin Hamad Al Khalifa, Prince Héritier et Premier Ministre, aux sports équestres et aux courses hippiques renforce également cet héritage profondément ancré dans la culture bahreïnienne.",
+        "location": "Royaume de Bahreïn",
+        "category": "Héritage",
+        "quote": "À Bahreïn, l’équitation est bien plus qu’un sport : c’est un héritage national et une tradition vivante transmise de génération en génération.",
+        "imageAlt": "Portrait d’archives — un héritage équestre qui se poursuit aux Écuries Al Fursan"
+      }
+    }
+  },
+  "legacy": {
+    "eyebrow": "Personnalités et Moments Marquants",
+    "title": "Des Rencontres Qui Ont Marqué un Parcours",
+    "subtitle": "Cette section présente une sélection de photographies mémorables réunissant Abdulrahman Al Bastaki avec des personnalités royales, sportives et influentes tout au long de sa carrière. Chaque image raconte une histoire de confiance, de réussite et de passion commune pour l’excellence équestre.",
+    "readChapter": "Lire le chapitre",
+    "stories": {
+      "story-01": {
+        "eyebrow": "Héritage royal",
+        "title": "Le Leader Inspirant et Premier Cavalier",
+        "subtitle": "Sa Majesté le Roi Hamad bin Isa Al Khalifa",
+        "description": "Abdulrahman Al Bastaki considère Sa Majesté le Roi Hamad bin Isa Al Khalifa comme le leader inspirant et le premier cavalier ayant tracé la vision qui a permis l’essor de l’équitation moderne au Royaume de Bahreïn. Grâce à son soutien constant à la jeunesse bahreïnienne et à son engagement envers les sports équestres, Bahreïn figure aujourd’hui parmi les nations les plus reconnues dans le domaine du cheval et de l’endurance. Selon Al Bastaki, après la grâce de Dieu, c’est la vision et le leadership de Sa Majesté qui ont contribué au développement remarquable du Royaume dans tous les domaines.",
+        "quote": "Les grandes visions construisent l’avenir, et les grands leaders inspirent les générations.",
+        "imageAlt": "Sa Majesté le Roi Hamad bin Isa Al Khalifa marchant avec ses compagnons — archives du patrimoine royal équestre"
+      },
+      "story-02": {
+        "eyebrow": "Leadership",
+        "title": "Un Leader de Confiance et de Réussite",
+        "subtitle": "Son Altesse Royale le Prince Salman bin Hamad Al Khalifa",
+        "role": "Prince Héritier et Premier Ministre",
+        "description": "Pour Abdulrahman Al Bastaki, Son Altesse Royale le Prince Salman bin Hamad Al Khalifa est un leader inspirant qui a su insuffler confiance et ambition à chaque citoyen bahreïnien. Grâce à sa vision et à son soutien constant, le Royaume poursuit une trajectoire remarquable de progrès et de réussite.\n\nSelon Al Bastaki, aucun accomplissement national ni aucune réussite internationale ne serait complet sans l’influence du soutien, de l’accompagnement et de la vision de Son Altesse Royale, qui continuent de renforcer le développement de Bahreïn.",
+        "quote": "Les grandes réussites naissent d’un leadership qui croit en son peuple et en son avenir.",
+        "imageAlt": "Son Altesse Royale le Prince Salman bin Hamad Al Khalifa lors d’un événement sportif national"
+      },
+      "story-03": {
+        "eyebrow": "Jeunesse & Sport",
+        "title": "Des Leaders Qui Ont Inspiré Toute Une Génération",
+        "description": "Selon Al Bastaki, ces deux leaders partagent une confiance profonde dans les capacités de la jeunesse bahreïnienne, une conviction qui continue de porter Bahreïn vers l’excellence.",
+        "quote": "Lorsque les dirigeants croient en leur jeunesse, la réussite devient une culture nationale.",
+        "imageAlt": "Son Altesse Cheikh Nasser bin Hamad Al Khalifa et Son Altesse Cheikh Khalid bin Hamad Al Khalifa lors d’une cérémonie de reconnaissance — archives jeunesse et sport",
+        "figures": {
+          "nasser": {
+            "name": "Son Altesse Cheikh Nasser bin Hamad Al Khalifa",
+            "role": "Représentant de Sa Majesté le Roi pour les Affaires Humanitaires et la Jeunesse\nConseiller à la Sécurité Nationale",
+            "description": "Pour Abdulrahman Al Bastaki, Son Altesse Cheikh Nasser bin Hamad Al Khalifa incarne l’ambition, la détermination et l’excellence. Dès son plus jeune âge, il a construit son parcours vers le succès international, devenant champion du monde et une source d’inspiration pour la jeunesse bahreïnienne."
+          },
+          "khalid": {
+            "name": "Son Altesse Cheikh Khalid bin Hamad Al Khalifa",
+            "role": "Premier Vice-Président du Conseil Suprême de la Jeunesse et des Sports\nPrésident de l’Autorité Générale des Sports\nPrésident du Comité Olympique de Bahreïn",
+            "description": "Abdulrahman Al Bastaki considère également Son Altesse Cheikh Khalid bin Hamad Al Khalifa comme un exemple de leadership moderne et de soutien à la jeunesse. Son engagement constant en faveur du sport et du développement des talents a contribué à l’émergence de nombreuses réussites nationales."
+          }
+        }
+      },
+      "story-04": {
+        "eyebrow": "Fondations de l’endurance",
+        "title": "Un Soutien Majeur du Parcours",
+        "subtitle": "Son Altesse Cheikh Abdullah bin Isa Al Khalifa",
+        "description": "Selon Abdulrahman Al Bastaki, Son Altesse Cheikh Abdullah bin Isa Al Khalifa a joué un rôle essentiel dans le développement de l’endurance équestre au Royaume de Bahreïn depuis le début des années 2000. Son soutien constant à l’équipe royale et à cette discipline a contribué à renforcer la position de Bahreïn sur la scène équestre internationale.\n\nAl Bastaki estime que cette vision et cet engagement ont posé les bases des nombreux succès obtenus par Bahreïn au fil des années, tout en favorisant le développement des cavaliers et des chevaux.",
+        "quote": "Les grandes réussites naissent d’une vision qui croit aux champions de demain.",
+        "imageAlt": "Son Altesse Cheikh Abdullah bin Isa Al Khalifa avec l’équipe d’endurance lors d’une présentation cérémonielle — archives équestres royales"
+      },
+      "story-05": {
+        "eyebrow": "Fraternité du Golfe",
+        "title": "Feu Sa Majesté le Sultan Qaboos bin Said",
+        "subtitle": "Un Leader au Service du Patrimoine et de la Fraternité",
+        "description": "Abdulrahman Al Bastaki se souvient avec reconnaissance de la visite de feu Sa Majesté le Sultan Qaboos bin Said au Royaume de Bahreïn au début des années 2000, ainsi que de sa participation à plusieurs événements équestres et patrimoniaux qui reflétaient la profondeur des relations fraternelles entre Bahreïn et le Sultanat d’Oman.\n\nSelon Al Bastaki, le Sultan Qaboos et la délégation qui l’accompagnait ont joué un rôle important dans le soutien et la promotion de l’équitation et de l’endurance, contribuant à renforcer leur présence aux niveaux local et régional grâce à la coopération, au partage des expériences et à la préservation du patrimoine commun du Golfe.\n\nCes visites ont laissé une empreinte durable au sein de la communauté équestre et ont renforcé les liens sportifs et culturels entre les deux nations, illustrant les valeurs et traditions partagées de la région.",
+        "quote": "L’équitation demeure un pont qui unit les peuples du Golfe autour de leur patrimoine et de leur fraternité.",
+        "location": "Royaume de Bahreïn",
+        "imageAlt": "Feu Sa Majesté le Sultan Qaboos bin Said avec Sa Majesté le Roi Hamad bin Isa Al Khalifa lors d’une rencontre officielle du Golfe — archives de fraternité et de patrimoine"
+      },
+      "story-06": {
+        "eyebrow": "Équitation arabe",
+        "title": "Des Dirigeants et Cavaliers au Service du Sport Équestre",
+        "description": "Il affirme que le soutien des dirigeants arabes a joué un rôle essentiel dans le développement de ces disciplines traditionnelles et dans leur préservation comme partie intégrante de l’histoire, de l’identité et de la culture communes de la région.",
+        "quote": "Lorsque les dirigeants soutiennent l’équitation, l’héritage du cheval continue d’inspirer les générations.",
+        "imageAlt": "Son Altesse Cheikh Mohammed bin Rashid Al Maktoum et Sa Majesté le Roi Abdallah II avec Sa Majesté le Roi Hamad lors d’un championnat international d’endurance — archives du leadership équestre arabe",
+        "figures": {
+          "maktoum": {
+            "name": "Son Altesse Cheikh Mohammed bin Rashid Al Maktoum",
+            "role": "Vice-président et Premier ministre des Émirats arabes unis, souverain de Dubaï",
+            "description": "Abdulrahman Al Bastaki considère Son Altesse Cheikh Mohammed bin Rashid Al Maktoum, connu comme le Cavalier des Arabes, comme l’un des plus grands soutiens des courses hippiques, de l’endurance et des sports équestres dans le monde arabe.\n\nGrâce à sa profonde passion pour les chevaux et à sa vision ambitieuse, Son Altesse a largement contribué au développement de ces disciplines, renforcé leur rayonnement international et soutenu l’organisation de grandes courses et compétitions ayant fait de la région une destination mondiale du sport équestre.\n\nSes réalisations et son parcours exceptionnel dans le monde de l’équitation ont également inspiré plusieurs générations de cavaliers et consolidé la place du cheval dans l’identité, le patrimoine et la culture arabes."
+          },
+          "abdullah": {
+            "name": "Sa Majesté le Roi Abdallah II bin Al Hussein",
+            "role": "Roi du Royaume hachémite de Jordanie",
+            "description": "Abdulrahman Al Bastaki souligne également le rôle de Sa Majesté le Roi Abdallah II bin Al Hussein dans le soutien aux courses hippiques et aux sports équestres, ainsi que son engagement en faveur de la préservation de cet héritage arabe profondément enraciné.\n\nSelon Al Bastaki, l’intérêt de Sa Majesté pour les activités sportives et patrimoniales a encouragé les cavaliers, soutenu les événements équestres et renforcé la place de l’équitation aux niveaux local et régional."
+          }
+        }
+      }
+    }
+  },
+  "gallery": {
+    "eyebrow": "Archives Visuelles",
+    "title": "Des Moments Gravés dans le Temps",
+    "subtitle": "Rencontres royales, réalisations et étapes marquantes d’un parcours exceptionnel.",
+    "filterAll": "Tout",
+    "filterRoyal": "Événements royaux",
+    "filterTraining": "Entraînement",
+    "filterChampionships": "Championnats",
+    "filterHistorical": "Photos historiques",
+    "filterInternational": "Événements internationaux",
+    "filterPersonal": "Collection personnelle",
+    "viewArchive": "Voir l’archive complète",
+    "imageCount": "{count} images",
+    "openLightbox": "Ouvrir l’image"
+  },
+  "newspapers": {
+    "eyebrow": "Archives Médias",
+    "title": "À Travers les Années",
+    "subtitle": "Articles et couvertures médiatiques retraçant les moments marquants du parcours.",
+    "filterAll": "Tout",
+    "filterNewspapers": "Journaux",
+    "filterMagazines": "Magazines",
+    "filterInterviews": "Interviews",
+    "filterReports": "Reportages",
+    "filterArabic": "Arabe",
+    "filterEnglish": "Anglais",
+    "filterFrench": "Français",
+    "viewArticle": "Voir l’article",
+    "download": "Télécharger",
+    "share": "Partager",
+    "close": "Fermer",
+    "page": "Page {page}"
+  },
+  "certificates": {
+    "eyebrow": "Distinctions",
+    "title": "Prix et Certificats d’Excellence",
+    "subtitle": "Récompenses et distinctions témoignant d’un parcours remarquable.",
+    "filterAll": "Tout",
+    "filterInternational": "International",
+    "filterRegional": "Régional",
+    "filterAwards": "Distinctions",
+    "filterAccreditation": "Accréditations",
+    "viewCertificate": "Voir le certificat",
+    "issuedBy": "Délivré par",
+    "year": "Année",
+    "verify": "Vérifier"
+  },
+  "royalConnections": {
+    "eyebrow": "Cercles Royaux",
+    "title": "Mots de Gratitude et de Fidélité",
+    "statement": "Abdulrahman Al Bastaki adresse ses plus sincères remerciements et sa profonde reconnaissance à la sage direction du Royaume de Bahreïn, sous la conduite de Sa Majesté le Roi Hamad bin Isa Al Khalifa, pour son soutien constant aux sports équestres, qui a contribué à faire de Bahreïn l’un des pays les plus remarquables dans ce domaine.\n\nIl exprime également sa gratitude envers Leurs Altesses et les dirigeants qui ont continuellement soutenu le développement de l’équitation et permis aux cavaliers bahreïniens de représenter leur pays avec succès sur les scènes régionales et internationales.",
+    "quote": "Chaque réussite est le fruit d’un leadership qui croit en son peuple et d’une nation qui a fait de l’excellence une valeur et de l’équitation une fierté nationale.",
+    "imageAlt": "Sa Majesté le Roi Hamad bin Isa Al Khalifa saluant des cavaliers d’endurance — archives du patronage royal"
+  },
+  "contact": {
+    "eyebrow": "Archive numérique",
+    "title": "Développement de l’Archive Numérique",
+    "subtitle": "Cette archive numérique a été conçue, développée et réalisée par l’équipe des technologies de l’information de PERMANENT INTEGRATION TRADING W.L.L (PMI IT Solutions), dans le cadre de son engagement à préserver le patrimoine national et à documenter les réalisations remarquables du Royaume de Bahreïn pour les générations futures.\n\nPMI IT Solutions est fière de soutenir le sport bahreïnien ainsi que les talents et personnalités nationales dans divers domaines, grâce à des solutions technologiques innovantes permettant de mettre en valeur les réussites et les parcours inspirants qui reflètent l’excellence du Royaume de Bahreïn.",
+    "quote": "Nous croyons que la technologie n’est pas seulement un outil, mais un moyen de préserver le patrimoine, de valoriser les talents et de transmettre les histoires de réussite aux générations futures.",
+    "contactInfo": "Coordonnées",
+    "emailLabel": "E-mail",
+    "phoneLabel": "Téléphone",
+    "websiteLabel": "Site web",
+    "cta": "Envoyer un message",
+    "whatsapp": "WhatsApp"
+  },
+  "footer": {
+    "tagline": "Héritage Équestre Intemporel",
+    "biography": "Depuis plus de cinq décennies, Abdulrahman Al Bastaki consacre sa vie au monde du cheval et des sports équestres, alliant expérience pratique et passion authentique. Tout au long de son parcours, il a contribué à la formation des chevaux et des cavaliers et a accompagné l’évolution de l’endurance à Bahreïn et dans la région.\n\nCette plateforme présente une partie de cette remarquable aventure, retraçant des décennies de réalisations, d’expériences et de souvenirs qui ont contribué à bâtir un héritage durable dans le monde équestre.",
+    "quickLinks": "Liens rapides",
+    "archiveLinks": "Archive",
+    "follow": "Suivre",
+    "rights": "Tous droits réservés.",
+    "developerPrefix": "Conçu et développé par ",
+    "developer": "Conçu et développé par PMI IT Solutions.",
+    "monogram": "UT"
+  },
+  "common": {
+    "loading": "Chargement…",
+    "close": "Fermer",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "learnMore": "En savoir plus",
+    "comingSoon": "Bientôt en phase 2",
+    "placeholder": "Contenu provisoire",
+    "backToTop": "Retour en haut",
+    "all": "Tout",
+    "year": "Année",
+    "category": "Catégorie"
+  },
+  "introModal": {
+    "title": "Pourquoi « Uncle Tim » ?",
+    "imageAlt": "Photographie d’archives — l’histoire du nom Uncle Tim",
+    "imagePlaceholder": "Emplacement de l’image",
+    "p1": "Le surnom « Uncle Tim » a été attribué à Abdulrahman Al Bastaki par l’équipe du Waterstock House Training Centre au Royaume-Uni lors de ses stages et camps d’entraînement en Europe en 1990.",
+    "p2": "Ce nom lui a été donné en reconnaissance de son talent exceptionnel dans le dressage, l’entraînement et la compréhension des chevaux, ainsi que de sa capacité naturelle à établir une relation de confiance avec eux.",
+    "p3": "Au fil des années, « Uncle Tim » est devenu un symbole d’expérience, de patience, de leadership et d’une profonde connaissance du cheval, accompagnant son parcours tout au long de sa carrière équestre.",
+    "dontShowAgain": "Ne plus afficher",
+    "continue": "Continuer vers le site"
+  }
+}

@@ -1,0 +1,416 @@
+{
+  "metadata": {
+    "title": "Abdulrahman Al Bastaki | Bahrain Equestrian Heritage Digital Museum",
+    "description": "Explore the digital museum of Abdulrahman Al Bastaki (Uncle Tim / Abdulrahman Albastaki) — Bahrain endurance riding heritage, Royal Endurance Team trainer, Arabian horses, and decades of Bahraini equestrian history.",
+    "ogTitle": "Abdulrahman Al Bastaki | Bahrain Equestrian Heritage Digital Museum",
+    "ogDescription": "Abdulrahman Al Bastaki — Uncle Tim. Discover Bahrain endurance riding, Royal Endurance Team legacy, and Bahraini equestrian heritage in a luxury digital museum.",
+    "keywords": "Abdulrahman Al Bastaki, Abdulrahman Albastaki, Abdulrahman Al-Bastaki, Uncle Tim Bahrain, Bahrain Endurance Riding, Bahrain Equestrian Heritage, Bahraini Horse Trainer, Royal Endurance Team Bahrain, Uncle Tim, Arabian horses Bahrain",
+    "breadcrumbHome": "Home",
+    "heroImageAlt": "Abdulrahman Al Bastaki Uncle Tim — Bahraini endurance horse trainer and Bahrain equestrian heritage portrait collage"
+  },
+  "navigation": {
+    "home": "Home",
+    "featured": "Featured",
+    "profile": "Profile",
+    "mediaCenter": "Media Center",
+    "achievements": "Achievements",
+    "biography": "Dedication",
+    "timeline": "Timeline",
+    "legacy": "Moments",
+    "gallery": "Gallery",
+    "newspapers": "Media",
+    "certifications": "Awards",
+    "royalConnections": "Royal",
+    "contact": "Contact",
+    "secondaryNav": "Site sections",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "skipToContent": "Skip to content"
+  },
+  "hero": {
+    "eyebrow": "Bahrain Royal Endurance Team",
+    "title": "Abdulrahman Al Bastaki",
+    "subtitle": "Uncle Tim",
+    "tagline": "A Legacy Written Through Horses",
+    "role": "Endurance Horse Trainer and Groom",
+    "ctaPrimary": "Explore the Legacy",
+    "ctaSecondary": "View the Timeline",
+    "scroll": "Scroll",
+    "slideLabel": "Slide {current} of {total}"
+  },
+  "featuredSlider": {
+    "ariaLabel": "Featured archive image slider",
+    "title": "Featured Archive",
+    "slides": {
+      "featured-01": {
+        "title": "The First Horseman",
+        "subtitle": "Where Royal Vision Shaped Endurance",
+        "imageAlt": "Handshake at an endurance event with Bahraini riders and royal figures"
+      },
+      "featured-02": {
+        "title": "Inspiring Generations",
+        "subtitle": "Leading the Path to Victory",
+        "imageAlt": "Two men smiling together at an equestrian gathering, one in a red Victorious jacket"
+      },
+      "featured-03": {
+        "title": "Architect of Glory",
+        "subtitle": "A Journey of Leadership and Success",
+        "imageAlt": "Mentor with a Bahrain Endurance Team rider and horse outdoors"
+      },
+      "featured-04": {
+        "title": "He Drew the Path and Led the Journey",
+        "subtitle": "Towards Glory and Achievement",
+        "imageAlt": "Award presentation at night with Bahrain team members exchanging a gift"
+      },
+      "featured-05": {
+        "title": "Honoring Our Leaders",
+        "subtitle": "Who Believed in Success Before It Happened",
+        "imageAlt": "Nighttime gift exchange honoring leaders at an equestrian gathering"
+      },
+      "featured-06": {
+        "title": "Proud Ambassadors of Bahrain",
+        "subtitle": "Raising Its Flag Everywhere",
+        "imageAlt": "Bahrain endurance medalists draped in national flags celebrating outdoors"
+      },
+      "featured-07": {
+        "title": "We Spared No Effort",
+        "subtitle": "To Represent Our Nation with Pride",
+        "imageAlt": "Team members with white horses in a sunlit field, representing Bahrain with pride"
+      },
+      "featured-08": {
+        "title": "Between Past and Present",
+        "subtitle": "The Trust of Leaders Shaped Our Journey",
+        "imageAlt": "Leaders in traditional dress with medal-winning athletes in a majlis setting"
+      }
+    }
+  },
+  "dashboard": {
+    "eyebrow": "Legacy at a Glance",
+    "title": "A Lifetime of Dedication",
+    "subtitle": "For more than five decades, horsemanship has been more than a sport—it has been a way of life and a continuous journey of learning, dedication, and achievement. The story began in Bahrain during the 1970s, and over the years, accumulated experience evolved into a rich legacy spanning horse training, stable management, endurance riding, and equestrian development. Between past and present, one goal has remained unchanged: serving the horse, developing riders, and representing the nation with pride on both local and international stages. Today, this journey stands as part of the enduring history of equestrian excellence in the region and beyond.",
+    "yearsExperience": "Years of Experience",
+    "yearsExperienceDesc": "More than five decades dedicated to horsemanship.",
+    "milestones": "Historic Milestones",
+    "milestonesDesc": "A journey filled with remarkable achievements and memories.",
+    "intlCerts": "International Certifications",
+    "intlCertsDesc": "Training and qualifications from global institutions.",
+    "regionalCerts": "Regional Certifications",
+    "regionalCertsDesc": "Accredited expertise from leading regional organizations.",
+    "royalEvents": "Royal Team Participations",
+    "royalEventsDesc": "Representing Bahrain in prestigious equestrian events.",
+    "championships": "Championship Titles",
+    "championshipsDesc": "Achievements earned across local and international arenas.",
+    "countries": "Countries Visited",
+    "countriesDesc": "Traveling worldwide to gain and share knowledge.",
+    "horsesTrained": "Horses Trained",
+    "horsesTrainedDesc": "Developing and preparing hundreds of horses over the years."
+  },
+  "timeline": {
+    "eyebrow": "Historical Journey",
+    "title": "Interactive Legacy Timeline",
+    "subtitle": "From the 1970s to the present day — a journey of passion and experience that helped shape a lasting legacy across generations of horsemanship and endurance.",
+    "filterAll": "All Decades",
+    "decadeLabel": "{decade} Era",
+    "readMore": "View details",
+    "location": "Location",
+    "category": "Category",
+    "events": {
+      "tl-1970s-01": {
+        "title": "1970s – Where the Journey Began",
+        "description": "The story began with a simple passion for horses—riding, caring, and learning. What started in Bahrain during the 1970s would later grow into a lifelong legacy in horsemanship and endurance.",
+        "location": "Kingdom of Bahrain",
+        "category": "Career Beginning",
+        "badge": "Era Opening",
+        "imageAlt": "Archive photographs — early equestrian years in Bahrain, 1970s"
+      },
+      "tl-1970s-02": {
+        "title": "Community Service & Charity Initiatives",
+        "description": "As proud Bahrainis, giving back to the community has always been part of the journey. Supporting charitable organizations and participating in humanitarian initiatives reflected a commitment to serving society beyond the world of horses.",
+        "location": "Kingdom of Bahrain",
+        "category": "Community Service",
+        "imageAlt": "Archive photographs — 1975 charity horse trail and community horsemanship in Bahrain"
+      },
+      "tl-1980s-01": {
+        "title": "1980s – Apprentice Jockey",
+        "description": "The early 1980s marked the transition from passion to commitment, as the Apprentice Jockey license represented the first official step in a journey that would span decades of learning, experience, and achievement.",
+        "category": "Development",
+        "quote": "Every great journey begins with a first step.",
+        "imageAlt": "Bahrain Equestrian and Horse Racing Club apprentice jockey licence, 1980–1981"
+      },
+      "tl-1980s-02": {
+        "title": "Pioneering the Cowboy Lifestyle in Bahrain",
+        "description": "In 1984, he was among the first to introduce Western horsemanship and cowboy culture to Bahrain, owning a complete set of authentic cowboy equipment at a time when it was rarely seen in the region.",
+        "location": "Saar, Kingdom of Bahrain",
+        "category": "Events",
+        "imageAlt": "Archive photographs — pioneering Western cowboy horsemanship in Saar, Bahrain, 1984"
+      },
+      "tl-1990s-01": {
+        "title": "International Training Camps",
+        "description": "The 1990s marked the beginning of a new chapter of growth and learning through international training camps, starting in Switzerland and expanding across Europe. These experiences provided valuable exposure to advanced horsemanship practices and international expertise.",
+        "location": "Switzerland – Europe",
+        "category": "Heritage",
+        "quote": "True experience begins beyond familiar horizons.",
+        "imageAlt": "Archive photographs — international equestrian training camps in Switzerland and Europe, 1990s"
+      },
+      "tl-1990s-02": {
+        "title": "Bringing International Expertise to Bahrain",
+        "description": "Building on years of international experience, the next milestone was introducing global equestrian standards to Bahrain through the establishment of one of the country's earliest specialized riding and show-jumping centers. Al Zubara became the starting point of this vision, with the center playing a pioneering role in organizing competitions and developing future generations of riders according to international standards.",
+        "location": "Al Zubara, Kingdom of Bahrain",
+        "category": "Recognition",
+        "imageAlt": "Archive photographs and press clippings — Al Zubara equestrian center and show-jumping competitions in Bahrain, 1990s"
+      },
+      "tl-1990s-03": {
+        "title": "Saar Riding School",
+        "description": "The Saar Riding School marked a significant milestone in the development of equestrian sports in Bahrain. Established according to international standards, it featured dedicated facilities for riding instruction, show jumping, and endurance training. The school also attracted renowned international experts and trainers, including leading figures in show-jumping education. Over the years, it helped develop many riders who have become recognized names in Bahrain’s equestrian community.",
+        "location": "Saar, Kingdom of Bahrain",
+        "category": "Championships",
+        "imageAlt": "Archive photographs and press — Saar Riding School competitions and training in Bahrain, 1998"
+      },
+      "tl-2000s-01": {
+        "title": "Joining the Bahrain Royal Team",
+        "description": "This decade marked the beginning of a new chapter with the appointment as a trainer for the Bahrain Royal Team. It was the start of a journey dedicated to representing the Kingdom of Bahrain and contributing to the advancement of equestrian and endurance sports at the highest level, both locally and internationally.",
+        "location": "Kingdom of Bahrain",
+        "category": "Professional Growth",
+        "quote": "Representing your nation is an honor; building success is a responsibility.",
+        "imageAlt": "Archive photographs — joining the Bahrain Royal Endurance Team as a trainer, 2000s"
+      },
+      "tl-2000s-02": {
+        "title": "A New Era of Success with the Royal Team",
+        "description": "This period marked the beginning of a remarkable journey of achievements with the Bahrain Royal Team, both locally and internationally. Abdulrahman Al Bastaki established himself as one of the leading figures in endurance riding, combining the skills of an accomplished rider with the expertise of a respected trainer, earning recognition across regional and international competitions.",
+        "location": "International Competitions",
+        "category": "International",
+        "quote": "True greatness is measured not by a single race, but by a lifetime of achievements.",
+        "imageAlt": "Archive photographs — Bahrain Royal Team endurance competitions and training, 2005"
+      },
+      "tl-2010s-01": {
+        "title": "A Decade of Golden Achievements",
+        "description": "This journey was not defined solely by experience, training, and participation—it was measured by success. Throughout this decade, Abdulrahman Al Bastaki stood on numerous podiums across local and international competitions, earning recognition as both a rider and a trainer, and cementing his reputation among the leading figures in endurance sport.",
+        "location": "Bahrain & International Arenas",
+        "category": "Contemporary Era",
+        "quote": "Gold is not the goal of the journey, but the result of years of dedication.",
+        "imageAlt": "Archive photographs — podium victories and golden achievements in endurance, 2010s"
+      },
+      "tl-2010s-02": {
+        "title": "Flat Racing & Knowledge Exchange",
+        "description": "During this period, Abdulrahman Al Bastaki maintained an active presence in flat racing events and equestrian gatherings. His participation provided valuable opportunities to exchange knowledge and experience with leading trainers and riders from different countries, further enriching his expertise and broadening his understanding of the sport.",
+        "location": "Bahrain & International Venues",
+        "category": "Royal Events",
+        "quote": "Success begins with continuous learning and the exchange of experience.",
+        "imageAlt": "Archive photographs — flat racing and knowledge exchange at international venues, 2014"
+      },
+      "tl-2010s-03": {
+        "title": "Royal Trust in Horse Training Excellence",
+        "description": "Abdulrahman Al Bastaki's role extended far beyond training and international participation. He earned the trust of the Royal Court to prepare and train horses ridden by His Majesty King Hamad bin Isa Al Khalifa, King of the Kingdom of Bahrain. Through his extensive experience and exceptional capabilities, he supervised the training of several royal horses, including “Haji Baik,” which was gifted by President Vladimir Putin to His Majesty King Hamad bin Isa Al Khalifa in 2016.",
+        "location": "Kingdom of Bahrain",
+        "category": "Royal Trust",
+        "quote": "Royal trust is built on expertise, dedication, and results.",
+        "imageAlt": "Archive photographs — royal horse training and the presentation of Haji Baik, 2016"
+      },
+      "tl-2020s-01": {
+        "title": "Sharing Knowledge & Building Future Generations",
+        "description": "Abdulrahman Al Bastaki's journey has extended far beyond competition and sporting achievements. Throughout his career, he has traveled to numerous countries and leading equestrian centers, not for tourism alone, but to gain knowledge, develop his skills, and learn from international best practices. He continues to bring this expertise back to Bahrain, contributing to the growth of equestrian sport and helping develop future generations of riders.",
+        "location": "Bahrain & Worldwide",
+        "category": "Present Day",
+        "quote": "The pursuit of knowledge never ends, and true experience is measured by the ability to share it with others.",
+        "imageAlt": "Archive photographs — sharing equestrian knowledge and building future generations worldwide"
+      },
+      "tl-2020s-02": {
+        "title": "Training Royal and Distinguished Riders",
+        "description": "Abdulrahman Al Bastaki had the honor of training members of the royal family, including sons of His Highness Sheikh Khalid bin Hamad Al Khalifa and His Highness Sheikh Nasser bin Hamad Al Khalifa, as well as a number of distinguished officials and prominent figures. This reflects the trust he has earned throughout his career through his expertise, dedication, and ability to develop riders to the highest professional standards.",
+        "location": "Kingdom of Bahrain",
+        "category": "Recognition",
+        "quote": "Trust is earned through experience and strengthened through achievement.",
+        "imageAlt": "Archive photograph — training royal and distinguished young riders in Bahrain, 2022"
+      },
+      "tl-2020s-03": {
+        "title": "A Continuing Legacy of Horsemanship",
+        "description": "Abdulrahman Al Bastaki continues to serve Bahraini equestrian sport as a trainer with the Royal Team at Al Fursan Stables, building upon decades of experience and dedication. He believes that Bahrain has long been, and remains, one of the leading nations in horsemanship and equestrian excellence, a vision established by His Majesty King Hamad bin Isa Al Khalifa, the Kingdom of Bahrain’s foremost horseman and leader.\n\nThe sport has continued to flourish under the leadership of His Highness Sheikh Nasser bin Hamad Al Khalifa, His Highness Sheikh Khalid bin Hamad Al Khalifa, and Her Highness Shaikha Noora bint Hamad Al Khalifa, whose efforts have strengthened Bahrain’s position on the international stage. The continued support of His Royal Highness Prince Salman bin Hamad Al Khalifa, Crown Prince and Prime Minister, for horse racing and equestrian sports further reflects the deep-rooted connection between Bahrain’s people and their equestrian heritage.",
+        "location": "Kingdom of Bahrain",
+        "category": "Legacy",
+        "quote": "In Bahrain, horsemanship is more than a sport—it is a national legacy and a living culture passed through generations.",
+        "imageAlt": "Archive portrait — a continuing legacy of horsemanship at Al Fursan Stables"
+      }
+    }
+  },
+  "legacy": {
+    "eyebrow": "Influential Figures & Milestones",
+    "title": "Moments That Shaped the Journey",
+    "subtitle": "This section showcases a collection of memorable photographs featuring Abdulrahman Al Bastaki alongside royal, sporting, and distinguished personalities throughout his career. Each image reflects a story of trust, achievement, and a shared passion for equestrian excellence.",
+    "readChapter": "Read chapter",
+    "stories": {
+      "story-01": {
+        "eyebrow": "Royal Heritage",
+        "title": "The Inspiring Leader & First Horseman",
+        "subtitle": "His Majesty King Hamad bin Isa Al Khalifa",
+        "description": "Abdulrahman Al Bastaki believes that His Majesty King Hamad bin Isa Al Khalifa is the inspiring leader and foremost horseman who established the vision that shaped Bahrain’s modern equestrian success. Through his unwavering support for Bahraini youth and his commitment to preserving the nation’s equestrian heritage, Bahrain has become one of the leading countries in the world of horsemanship and endurance sport. Al Bastaki affirms that, by the grace of God and the leadership of His Majesty, Bahrain has achieved remarkable progress and excellence across all sectors.",
+        "quote": "Great nations are built upon vision, and great generations are inspired by leadership.",
+        "imageAlt": "His Majesty King Hamad bin Isa Al Khalifa walking with companions — royal equestrian heritage archive"
+      },
+      "story-02": {
+        "eyebrow": "Leadership",
+        "title": "A Leader of Achievement and Confidence",
+        "subtitle": "His Royal Highness Prince Salman bin Hamad Al Khalifa",
+        "role": "Crown Prince and Prime Minister",
+        "description": "Abdulrahman Al Bastaki views His Royal Highness Prince Salman bin Hamad Al Khalifa, Crown Prince and Prime Minister, as an inspiring leader who has instilled confidence and ambition in the hearts of Bahrainis. Through his vision, leadership, and unwavering support, progress has become a defining characteristic of the Kingdom’s journey.\n\nAl Bastaki believes that no national achievement or international success is complete without the impact of His Royal Highness’s guidance and support, which continue to empower Bahrain’s growth and prosperity.",
+        "quote": "Great achievements begin with leaders who believe in their people and invest in their future.",
+        "imageAlt": "His Royal Highness Prince Salman bin Hamad Al Khalifa with companions at a national sporting event"
+      },
+      "story-03": {
+        "eyebrow": "Youth & Sport",
+        "title": "Leaders Who Inspired a Generation",
+        "description": "According to Al Bastaki, both leaders share a deep belief in the potential of Bahraini youth, a belief that continues to drive achievement and excellence across the Kingdom.",
+        "quote": "When leaders believe in their youth, achievement becomes a national culture.",
+        "imageAlt": "His Highness Sheikh Nasser bin Hamad Al Khalifa and His Highness Sheikh Khalid bin Hamad Al Khalifa at a ceremonial recognition — youth and sporting heritage archive",
+        "figures": {
+          "nasser": {
+            "name": "His Highness Sheikh Nasser bin Hamad Al Khalifa",
+            "role": "Representative of His Majesty the King for Humanitarian Work and Youth Affairs\nNational Security Advisor",
+            "description": "Abdulrahman Al Bastaki believes that His Highness Sheikh Nasser bin Hamad Al Khalifa embodies determination, ambition, and leadership. From an early age, he forged his path toward international success, becoming a world champion and a role model for Bahraini youth. His competitive spirit and perseverance have inspired generations of athletes and equestrians across the Kingdom."
+          },
+          "khalid": {
+            "name": "His Highness Sheikh Khalid bin Hamad Al Khalifa",
+            "role": "First Deputy Chairman of the Supreme Council for Youth and Sports\nChairman of the General Sports Authority\nPresident of the Bahrain Olympic Committee",
+            "description": "Al Bastaki also regards His Highness Sheikh Khalid bin Hamad Al Khalifa as a symbol of empowerment and youth development. Through his continuous support for sports and young talents, he has created opportunities for Bahrainis to excel and compete on the highest levels."
+          }
+        }
+      },
+      "story-04": {
+        "eyebrow": "Endurance Foundations",
+        "title": "A Key Supporter of the Journey",
+        "subtitle": "His Highness Sheikh Abdullah bin Isa Al Khalifa",
+        "description": "Abdulrahman Al Bastaki acknowledges the significant role played by His Highness Sheikh Abdullah bin Isa Al Khalifa in supporting endurance riding in the Kingdom of Bahrain since the early 2000s. His commitment to the development of the Royal Team and the sport itself contributed greatly to strengthening Bahrain's position in endurance riding.\n\nAl Bastaki believes that this continued support helped establish the foundations for many of Bahrain's achievements, creating an environment where riders and horses could develop and compete at the highest levels.",
+        "quote": "Great achievements begin with leaders who believe in building future champions.",
+        "imageAlt": "His Highness Sheikh Abdullah bin Isa Al Khalifa with the endurance team at a ceremonial presentation — royal equestrian archive"
+      },
+      "story-05": {
+        "eyebrow": "Gulf Brotherhood",
+        "title": "His Late Majesty Sultan Qaboos bin Said",
+        "subtitle": "A Leader Who Strengthened Heritage and Brotherhood",
+        "description": "Abdulrahman Al Bastaki fondly recalls the visit of the late Sultan Qaboos bin Said to the Kingdom of Bahrain in the early 2000s, where he attended several equestrian and heritage events that reflected the strong and historic ties between Bahrain and the Sultanate of Oman.\n\nAl Bastaki believes that Sultan Qaboos and his accompanying delegation played a significant role in supporting equestrian and endurance sports, helping to strengthen their presence at both local and regional levels through cooperation, knowledge exchange, and the preservation of Gulf heritage.\n\nThese visits left a lasting impact on the equestrian community and further strengthened the cultural and sporting relations between the two brotherly nations, reflecting the shared values and traditions of the Gulf region.",
+        "quote": "Equestrian sport remains a bridge that unites Gulf nations through heritage, respect, and shared values.",
+        "location": "Kingdom of Bahrain",
+        "imageAlt": "His Late Majesty Sultan Qaboos bin Said with His Majesty King Hamad bin Isa Al Khalifa at a formal Gulf gathering — brotherhood and heritage archive"
+      },
+      "story-06": {
+        "eyebrow": "Arab Horsemanship",
+        "title": "Leaders and Horsemen Who Supported Equestrian Sport",
+        "description": "He emphasises that the support provided by Arab leaders has played a significant role in advancing these traditional sports and preserving them as an important part of the region’s history, identity, and shared culture.",
+        "quote": "When leaders support equestrian sport, the heritage of the horse continues to inspire generations.",
+        "imageAlt": "His Highness Sheikh Mohammed bin Rashid Al Maktoum and His Majesty King Abdullah II with His Majesty King Hamad at an international endurance championship — Arab equestrian leadership archive",
+        "figures": {
+          "maktoum": {
+            "name": "His Highness Sheikh Mohammed bin Rashid Al Maktoum",
+            "role": "Vice President and Prime Minister of the United Arab Emirates, Ruler of Dubai",
+            "description": "Abdulrahman Al Bastaki regards His Highness Sheikh Mohammed bin Rashid Al Maktoum, widely known as the Arabian Horseman, as one of the most prominent supporters of horse racing, endurance riding, and equestrian sport in the Arab world.\n\nThrough his deep passion for horses and his ambitious vision, His Highness has contributed significantly to the development of these disciplines, strengthened their international presence, and supported major races and championships that have positioned the region as a leading global destination for equestrian sport.\n\nHis achievements and distinguished journey in horsemanship have also inspired generations of riders, while his continuous support has reinforced the horse’s important place within Arab identity, heritage, and culture."
+          },
+          "abdullah": {
+            "name": "His Majesty King Abdullah II bin Al Hussein",
+            "role": "King of the Hashemite Kingdom of Jordan",
+            "description": "Abdulrahman Al Bastaki also values the role of His Majesty King Abdullah II bin Al Hussein in supporting horse racing and equestrian sport, as well as his commitment to preserving this deeply rooted Arab heritage and passing it on to future generations.\n\nAl Bastaki believes that His Majesty’s interest in sporting and heritage activities has encouraged riders, supported equestrian events, and strengthened the position of horsemanship at both local and regional levels."
+          }
+        }
+      }
+    }
+  },
+  "gallery": {
+    "eyebrow": "Visual Archive",
+    "title": "Moments Preserved Through Time",
+    "subtitle": "Royal encounters, achievements, and milestones that shaped an extraordinary journey.",
+    "filterAll": "All",
+    "filterRoyal": "Royal Events",
+    "filterTraining": "Training",
+    "filterChampionships": "Championships",
+    "filterHistorical": "Historical Photos",
+    "filterInternational": "International Events",
+    "filterPersonal": "Personal Collection",
+    "viewArchive": "View Full Archive",
+    "imageCount": "{count} images",
+    "openLightbox": "Open image"
+  },
+  "newspapers": {
+    "eyebrow": "Media Archive",
+    "title": "Featured Through the Years",
+    "subtitle": "Press coverage and publications documenting key moments of the journey.",
+    "filterAll": "All",
+    "filterNewspapers": "Newspapers",
+    "filterMagazines": "Magazines",
+    "filterInterviews": "Interviews",
+    "filterReports": "Reports",
+    "filterArabic": "Arabic",
+    "filterEnglish": "English",
+    "filterFrench": "French",
+    "viewArticle": "View article",
+    "download": "Download",
+    "share": "Share",
+    "close": "Close",
+    "page": "Page {page}"
+  },
+  "certificates": {
+    "eyebrow": "Recognition",
+    "title": "Awards & Certificates of Excellence",
+    "subtitle": "Honors and certifications reflecting a distinguished journey of achievement.",
+    "filterAll": "All",
+    "filterInternational": "International",
+    "filterRegional": "Regional",
+    "filterAwards": "Awards",
+    "filterAccreditation": "Accreditations",
+    "viewCertificate": "View certificate",
+    "issuedBy": "Issued by",
+    "year": "Year",
+    "verify": "Verify"
+  },
+  "royalConnections": {
+    "eyebrow": "Royal Circles",
+    "title": "Words of Gratitude and Loyalty",
+    "statement": "Abdulrahman Al Bastaki extends his sincere gratitude and appreciation to the wise leadership of the Kingdom of Bahrain, led by His Majesty King Hamad bin Isa Al Khalifa, for the continuous support and attention given to equestrian sports, which have helped establish Bahrain as one of the region’s leading nations in horsemanship and endurance riding.\n\nHe also expresses his appreciation for the ongoing support of Their Highnesses and distinguished leaders, whose encouragement has played a vital role in developing the sport and empowering Bahraini riders to achieve success on regional and international stages.",
+    "quote": "Every achievement is the result of a leadership that believes in its people and a nation that has made excellence a way of life and horsemanship a source of pride.",
+    "imageAlt": "His Majesty King Hamad bin Isa Al Khalifa greeting endurance riders — royal patronage archive"
+  },
+  "contact": {
+    "eyebrow": "Digital Archive",
+    "title": "Digital Archive Development",
+    "subtitle": "This digital archive was designed, developed, and implemented by the Information Technology Team at PERMANENT INTEGRATION TRADING W.L.L (PMI IT Solutions), reflecting the company's commitment to preserving national achievements and documenting Bahrain’s rich heritage for future generations.\n\nPMI IT Solutions takes pride in supporting Bahraini sports, national talents, and distinguished figures across various sectors through innovative digital solutions and technology platforms that help showcase success stories and achievements that represent the Kingdom of Bahrain and its people.",
+    "quote": "We believe technology is not merely a tool, but a bridge that preserves heritage, empowers talent, and tells the stories of success for generations to come.",
+    "contactInfo": "Contact Information",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "websiteLabel": "Website",
+    "cta": "Send a Message",
+    "whatsapp": "WhatsApp"
+  },
+  "footer": {
+    "tagline": "Timeless Equestrian Legacy",
+    "biography": "For more than five decades, Abdulrahman Al Bastaki has dedicated his life to the world of horses and equestrian sport, combining practical expertise with a lifelong passion rooted in authenticity and commitment. Throughout his distinguished journey, he has contributed to the training and development of horses and riders while witnessing and supporting the growth of endurance riding in Bahrain and the region.\n\nThis platform reflects part of that remarkable journey, documenting decades of achievements, experiences, and memories that have helped shape an enduring legacy in the world of horsemanship.",
+    "quickLinks": "Quick Links",
+    "archiveLinks": "Archive",
+    "follow": "Follow",
+    "rights": "All rights reserved.",
+    "developerPrefix": "Designed & developed by ",
+    "developer": "Designed & developed by PMI IT Solutions.",
+    "monogram": "UT"
+  },
+  "common": {
+    "loading": "Loading…",
+    "close": "Close",
+    "previous": "Previous",
+    "next": "Next",
+    "learnMore": "Learn more",
+    "comingSoon": "Coming in Phase 2",
+    "placeholder": "Placeholder content",
+    "backToTop": "Back to top",
+    "all": "All",
+    "year": "Year",
+    "category": "Category"
+  },
+  "introModal": {
+    "title": "Why \"Uncle Tim\"?",
+    "imageAlt": "Archive photograph — the story behind the name Uncle Tim",
+    "imagePlaceholder": "Image Placeholder",
+    "p1": "The nickname \"Uncle Tim\" was given to Abdulrahman Al Bastaki by the team at Waterstock House Training Centre in the United Kingdom during his European training camps in 1990.",
+    "p2": "The name was a reflection of his exceptional horsemanship, natural ability to train and handle horses, and the trust he was able to build with them from an early age.",
+    "p3": "Over time, \"Uncle Tim\" became a respected name associated with experience, patience, leadership, and a deep understanding of horses, remaining part of his identity throughout decades of achievements in the equestrian world.",
+    "dontShowAgain": "Don't show this again",
+    "continue": "Continue to Website"
+  }
+}

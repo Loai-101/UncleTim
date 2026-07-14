@@ -1,0 +1,842 @@
+@import "tailwindcss";
+
+/* -------------------------------------------------------------------------- */
+/* Design tokens                                                              */
+/* -------------------------------------------------------------------------- */
+
+:root {
+  --royal-red: #760018;
+  --deep-red: #4d0010;
+  --burgundy: #3a000c;
+  --luxury-gold: #d4af37;
+  --soft-gold: #e8cf7a;
+  --dark-gold: #9b7624;
+  --ivory: #f8f4eb;
+  --warm-white: #fffdf8;
+  --pure-white: #ffffff;
+  --charcoal: #171717;
+  --muted-text: #6f665e;
+  --border-gold: rgba(212, 175, 55, 0.35);
+
+  --hero-height-desktop: 760px;
+  --hero-height-tablet: 560px;
+  --hero-height-mobile: 420px;
+
+  --featured-slider-height-desktop: 450px;
+  --featured-slider-height-tablet: 360px;
+  --featured-slider-height-mobile: 280px;
+
+  --background: var(--warm-white);
+  --foreground: var(--charcoal);
+
+  /* Font stacks — locale-active via html[lang] below */
+  --font-playfair-stack: var(--font-playfair), "Playfair Display", Georgia,
+    "Times New Roman", serif;
+  --font-cormorant-stack: var(--font-cormorant), "Cormorant Garamond", Georgia,
+    "Times New Roman", serif;
+  --font-aref-stack: var(--font-aref-ruqaa), "Aref Ruqaa Ink", "Traditional Arabic",
+    serif;
+  --font-aref-solid-stack: var(--font-aref-ruqaa-solid), "Aref Ruqaa",
+    "Traditional Arabic", serif;
+  --font-inter-stack: var(--font-inter), Inter, "Segoe UI", system-ui, sans-serif;
+  --font-ibm-plex-ar-stack: var(--font-ibm-plex-arabic), "IBM Plex Sans Arabic",
+    "Segoe UI", Tahoma, sans-serif;
+
+  /* Default active stacks = English (Playfair + Inter) */
+  --font-display-stack: var(--font-playfair-stack);
+  --font-body-stack: var(--font-inter-stack);
+  --font-arabic-display-stack: var(--font-aref-stack);
+  --font-arabic-body-stack: var(--font-ibm-plex-ar-stack);
+}
+
+html[lang="fr"] {
+  --font-display-stack: var(--font-cormorant-stack);
+  --font-body-stack: var(--font-inter-stack);
+}
+
+html[lang="ar"] {
+  --font-display-stack: var(--font-aref-stack);
+  --font-body-stack: var(--font-ibm-plex-ar-stack);
+}
+
+@theme inline {
+  --color-royal-red: var(--royal-red);
+  --color-deep-red: var(--deep-red);
+  --color-burgundy: var(--burgundy);
+  --color-luxury-gold: var(--luxury-gold);
+  --color-soft-gold: var(--soft-gold);
+  --color-dark-gold: var(--dark-gold);
+  --color-ivory: var(--ivory);
+  --color-warm-white: var(--warm-white);
+  --color-pure-white: var(--pure-white);
+  --color-charcoal: var(--charcoal);
+  --color-muted-text: var(--muted-text);
+  --color-border-gold: var(--border-gold);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-display: var(--font-display-stack);
+  --font-body: var(--font-body-stack);
+  --font-arabic-display: var(--font-arabic-display-stack);
+  --font-arabic-body: var(--font-arabic-body-stack);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Base                                                                       */
+/* -------------------------------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+/* Sticky secondary navbar offset for in-page section links */
+main > section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body-stack);
+  font-size: 1rem;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--luxury-gold) 35%, transparent);
+  color: var(--burgundy);
+}
+
+:focus-visible {
+  outline: 2px solid var(--luxury-gold);
+  outline-offset: 3px;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Typography utilities                                                       */
+/* -------------------------------------------------------------------------- */
+
+.display-title {
+  font-family: var(--font-display-stack);
+  font-weight: 500;
+  font-size: clamp(2.75rem, 6vw, 5.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--pure-white);
+}
+
+.section-title {
+  font-family: var(--font-display-stack);
+  font-weight: 500;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.18;
+  letter-spacing: -0.015em;
+  color: var(--burgundy);
+}
+
+.section-subtitle {
+  font-family: var(--font-body-stack);
+  font-weight: 400;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  color: var(--muted-text);
+  max-width: 40rem;
+}
+
+.section-subtitle.max-w-none {
+  max-width: none;
+}
+
+.eyebrow-label {
+  font-family: var(--font-body-stack);
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--luxury-gold);
+}
+
+.body-large {
+  font-family: var(--font-body-stack);
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  color: var(--charcoal);
+}
+
+.body-standard {
+  font-family: var(--font-body-stack);
+  font-size: 1rem;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
+  color: var(--muted-text);
+}
+
+.quote-text {
+  font-family: var(--font-display-stack);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.25rem, 2.2vw, 1.85rem);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--burgundy);
+}
+
+.statistic-number {
+  font-family: var(--font-display-stack);
+  font-weight: 500;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--royal-red);
+}
+
+.timeline-year {
+  font-family: var(--font-display-stack);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1;
+  letter-spacing: 0.03em;
+  color: var(--luxury-gold);
+}
+
+/* French display — slightly looser tracking for Garamond elegance */
+html[lang="fr"] .display-title,
+html[lang="fr"] .section-title {
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+
+html[lang="fr"] .quote-text {
+  letter-spacing: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Arabic / RTL typography                                                    */
+/* -------------------------------------------------------------------------- */
+
+html[lang="ar"] body {
+  letter-spacing: 0;
+  line-height: 1.85;
+}
+
+html[lang="ar"] .display-title,
+html[lang="ar"] .section-title,
+html[lang="ar"] .quote-text,
+html[lang="ar"] .statistic-number,
+html[lang="ar"] .timeline-year {
+  font-family: var(--font-aref-stack);
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0;
+}
+
+html[lang="ar"] .display-title,
+html[lang="ar"] .section-title {
+  line-height: 1.4;
+}
+
+html[lang="ar"] .quote-text {
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+html[lang="ar"] .body-large,
+html[lang="ar"] .body-standard,
+html[lang="ar"] .section-subtitle,
+html[lang="ar"] .eyebrow-label {
+  font-family: var(--font-ibm-plex-ar-stack);
+  letter-spacing: 0;
+}
+
+html[lang="ar"] .eyebrow-label {
+  letter-spacing: 0.06em;
+  font-weight: 500;
+}
+
+html[lang="ar"] .body-large,
+html[lang="ar"] .body-standard,
+html[lang="ar"] .section-subtitle {
+  line-height: 1.95;
+}
+
+/* Ensure Tailwind font-display / font-body utilities follow locale stacks */
+.font-display {
+  font-family: var(--font-display-stack);
+}
+
+.font-body {
+  font-family: var(--font-body-stack);
+}
+
+html[lang="ar"] .font-display {
+  font-family: var(--font-aref-stack);
+  letter-spacing: 0;
+}
+
+html[lang="ar"] .font-body,
+html[lang="ar"] .font-arabic-body {
+  font-family: var(--font-ibm-plex-ar-stack);
+  letter-spacing: 0;
+}
+
+html[lang="ar"] .font-arabic-display {
+  font-family: var(--font-aref-stack);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Decorative utilities                                                       */
+/* -------------------------------------------------------------------------- */
+
+.pattern-horse-lines {
+  background-color: transparent;
+  background-image:
+    linear-gradient(
+      135deg,
+      transparent 40%,
+      rgba(212, 175, 55, 0.06) 40%,
+      rgba(212, 175, 55, 0.06) 41%,
+      transparent 41%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 48%,
+      rgba(212, 175, 55, 0.04) 48%,
+      rgba(212, 175, 55, 0.04) 50%,
+      transparent 50%
+    );
+  background-size: 48px 48px, 72px 72px;
+}
+
+.gold-divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--luxury-gold),
+    transparent
+  );
+}
+
+/* -------------------------------------------------------------------------- */
+/* Compact hero banner                                                        */
+/* -------------------------------------------------------------------------- */
+
+.hero-section {
+  width: 100%;
+  height: var(--hero-height-desktop);
+  overflow: hidden;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .hero-section {
+    height: var(--hero-height-tablet);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section {
+    height: var(--hero-height-mobile);
+  }
+}
+
+.hero-banner-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Hero name lines only — solid Aref Ruqaa so white color applies (Ink is a color font) */
+html[lang="ar"] .hero-section .hero-name,
+html[lang="ar"] .hero-section .hero-nickname {
+  font-family: var(--font-aref-solid-stack);
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+.hero-section .hero-name,
+.hero-section .hero-nickname {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Featured slider                                                            */
+/* -------------------------------------------------------------------------- */
+
+.featured-slider-shell {
+  width: min(96%, 1800px);
+  margin-inline: auto;
+}
+
+.featured-slider-frame {
+  height: var(--featured-slider-height-desktop);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 18px 50px -24px rgba(58, 0, 12, 0.35);
+}
+
+@media (max-width: 1024px) {
+  .featured-slider-frame {
+    height: var(--featured-slider-height-tablet);
+  }
+}
+
+@media (max-width: 640px) {
+  .featured-slider-frame {
+    height: var(--featured-slider-height-mobile);
+  }
+}
+
+.featured-swiper {
+  height: 100%;
+  overflow: visible;
+}
+
+.featured-swiper .swiper-slide {
+  height: 100%;
+  opacity: 0.55;
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.featured-swiper .swiper-slide-active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.featured-swiper .swiper-slide-active .featured-slide-card {
+  box-shadow: 0 22px 48px -20px rgba(58, 0, 12, 0.45);
+}
+
+.featured-swiper .swiper-slide:not(.swiper-slide-active) .featured-slide-dim {
+  opacity: 1;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  inset-inline: 0;
+  padding: 14px 18px;
+  color: white;
+  background: rgba(18, 8, 10, 0.8);
+  border-top: 1px solid rgba(212, 175, 55, 0.7);
+}
+
+html[lang="ar"] .slide-caption-subtitle {
+  font-family: var(--font-ibm-plex-ar-stack);
+  letter-spacing: 0;
+}
+
+.featured-slider-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 20;
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid var(--luxury-gold);
+  background: var(--pure-white);
+  color: var(--burgundy);
+  box-shadow: 0 10px 24px -12px rgba(58, 0, 12, 0.4);
+  transform: translateY(-50%);
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.featured-slider-nav:hover {
+  background: var(--burgundy);
+  color: var(--soft-gold);
+  border-color: var(--luxury-gold);
+}
+
+.featured-slider-nav--prev {
+  inset-inline-start: 0.75rem;
+}
+
+.featured-slider-nav--next {
+  inset-inline-end: 0.75rem;
+}
+
+.featured-slider-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 1.25rem;
+}
+
+.featured-slider-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  margin: 0 !important;
+  opacity: 1;
+  background: #cfc8bf;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.featured-slider-pagination .swiper-pagination-bullet-active {
+  background: var(--burgundy);
+  transform: scale(1.25);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Timeline — style variants + decade atmosphere                              */
+/* -------------------------------------------------------------------------- */
+
+.timeline-era-year-bg {
+  color: color-mix(in srgb, var(--burgundy) 7%, transparent);
+}
+
+.timeline-era-rule {
+  opacity: 0.9;
+}
+
+.timeline-card {
+  border-color: var(--border-gold);
+  box-shadow: 0 4px 18px -14px rgba(58, 0, 12, 0.22);
+}
+
+.timeline-card:hover {
+  border-color: color-mix(in srgb, var(--luxury-gold) 55%, transparent);
+  box-shadow: 0 14px 36px -18px rgba(212, 175, 55, 0.4);
+}
+
+.timeline-card-title {
+  color: var(--burgundy);
+}
+
+.timeline-card-copy {
+  color: var(--muted-text);
+}
+
+.timeline-card-category {
+  color: color-mix(in srgb, var(--dark-gold) 90%, var(--charcoal));
+}
+
+.timeline-card-badge {
+  border-color: color-mix(in srgb, var(--luxury-gold) 50%, transparent);
+  background: color-mix(in srgb, var(--burgundy) 88%, transparent);
+  color: var(--soft-gold);
+}
+
+/* 1. Royal — burgundy accents, gold border */
+.timeline-card[data-style="royal"] {
+  border-color: color-mix(in srgb, var(--luxury-gold) 55%, var(--burgundy));
+  background: linear-gradient(
+    160deg,
+    var(--ivory) 0%,
+    color-mix(in srgb, var(--warm-white) 88%, var(--royal-red) 12%) 100%
+  );
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--luxury-gold) 25%, transparent),
+    0 6px 22px -14px rgba(58, 0, 12, 0.28);
+}
+
+.timeline-card[data-style="royal"] .timeline-card-title {
+  color: var(--deep-red);
+}
+
+.timeline-card[data-style="royal"] .timeline-year {
+  color: var(--luxury-gold);
+}
+
+/* 2. Archive — paper / vintage */
+.timeline-card[data-style="archive"] {
+  background: color-mix(in srgb, var(--ivory) 90%, #c9b89a 10%);
+  border-radius: 0.3rem;
+  border-color: color-mix(in srgb, var(--dark-gold) 35%, var(--border-gold));
+}
+
+.timeline-card[data-style="archive"] .timeline-card-media,
+.timeline-card[data-style="archive"] .timeline-card-image {
+  border-radius: 0.25rem 0.25rem 0 0;
+  filter: sepia(0.16) contrast(0.96) saturate(0.88);
+}
+
+/* 3. Editorial — clean minimal body */
+.timeline-card[data-style="editorial"] {
+  background: var(--pure-white);
+  border-color: color-mix(in srgb, var(--luxury-gold) 28%, transparent);
+  box-shadow: none;
+}
+
+.timeline-card[data-style="editorial"] .timeline-card-body {
+  padding-block: 1rem;
+}
+
+.timeline-card[data-style="editorial"] .timeline-card-copy {
+  color: var(--muted-text);
+}
+
+/* 4. Documentary — image focus + metadata */
+.timeline-card[data-style="documentary"] {
+  background: color-mix(in srgb, var(--ivory) 86%, #b8954a 14%);
+  border-color: color-mix(in srgb, var(--dark-gold) 45%, var(--border-gold));
+  box-shadow: 0 8px 24px -14px rgba(120, 70, 20, 0.28);
+}
+
+.timeline-card[data-style="documentary"] .timeline-card-media {
+  filter: sepia(0.08) saturate(1.04) brightness(0.98);
+}
+
+/* 5. Premium modern — glass + thin gold */
+.timeline-card[data-style="modern"] {
+  background: color-mix(in srgb, var(--warm-white) 78%, transparent);
+  border-color: color-mix(in srgb, var(--luxury-gold) 42%, transparent);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 32px -18px rgba(58, 0, 12, 0.2);
+}
+
+.timeline-card[data-style="modern"] .timeline-year {
+  letter-spacing: 0.05em;
+}
+
+/* Decade separators remain subtle; styleVariant owns card look */
+.timeline-era[data-decade="1970s"] .timeline-era-year-bg {
+  color: color-mix(in srgb, var(--burgundy) 6%, transparent);
+}
+
+.timeline-era[data-decade="1990s"] .timeline-era-rule {
+  width: 8rem;
+  height: 1.5px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--luxury-gold),
+    var(--burgundy),
+    var(--luxury-gold),
+    transparent
+  );
+}
+
+.timeline-era[data-decade="2020s"] .timeline-era-year-bg {
+  color: color-mix(in srgb, var(--luxury-gold) 10%, transparent);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Storytelling chapter slider                                                */
+/* -------------------------------------------------------------------------- */
+
+.storytelling-swiper {
+  overflow: hidden;
+}
+
+.storytelling-swiper .swiper-slide {
+  height: auto;
+}
+
+.story-slide {
+  min-height: 480px;
+}
+
+@media (min-width: 1024px) {
+  .story-slide {
+    min-height: 560px;
+  }
+
+  /* Long dual-figure chapter: fixed image frame, scrollable text only */
+  .story-slide--figures {
+    height: 560px;
+    min-height: 560px;
+  }
+
+  .story-slide-copy--scroll {
+    scrollbar-width: thin;
+    scrollbar-color: color-mix(in srgb, var(--luxury-gold) 55%, transparent)
+      transparent;
+  }
+
+  .story-slide-copy--scroll::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .story-slide-copy--scroll::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--luxury-gold) 55%, transparent);
+  }
+}
+
+@media (max-width: 1023px) {
+  .story-slide-copy--scroll {
+    max-height: min(58vh, 420px);
+  }
+}
+
+.storytelling-slider-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 20;
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid var(--luxury-gold);
+  background: var(--pure-white);
+  color: var(--burgundy);
+  box-shadow: 0 10px 24px -12px rgba(58, 0, 12, 0.4);
+  transform: translateY(-50%);
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.storytelling-slider-nav:hover {
+  background: var(--burgundy);
+  color: var(--soft-gold);
+}
+
+.storytelling-slider-nav--prev {
+  inset-inline-start: 0.25rem;
+}
+
+.storytelling-slider-nav--next {
+  inset-inline-end: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .storytelling-slider-nav--prev {
+    inset-inline-start: -0.5rem;
+  }
+
+  .storytelling-slider-nav--next {
+    inset-inline-end: -0.5rem;
+  }
+}
+
+.storytelling-slider-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.storytelling-slider-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  margin: 0 !important;
+  opacity: 1;
+  background: #cfc8bf;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.storytelling-slider-pagination .swiper-pagination-bullet-active {
+  background: var(--burgundy);
+  transform: scale(1.25);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Certificates slider                                                        */
+/* -------------------------------------------------------------------------- */
+
+.certificates-swiper .swiper-slide {
+  height: auto;
+  box-sizing: border-box;
+}
+
+.certificates-swiper .swiper-slide > * {
+  height: 100%;
+}
+
+.certificates-slider-nav {
+  position: absolute;
+  top: 42%;
+  z-index: 20;
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 1px solid var(--luxury-gold);
+  background: var(--pure-white);
+  color: var(--burgundy);
+  box-shadow: 0 10px 24px -12px rgba(58, 0, 12, 0.4);
+  transform: translateY(-50%);
+  transition:
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.certificates-slider-nav:hover {
+  background: var(--burgundy);
+  color: var(--soft-gold);
+}
+
+.certificates-slider-nav--prev {
+  inset-inline-start: 0.15rem;
+}
+
+.certificates-slider-nav--next {
+  inset-inline-end: 0.15rem;
+}
+
+@media (min-width: 768px) {
+  .certificates-slider-nav--prev {
+    inset-inline-start: -0.35rem;
+  }
+
+  .certificates-slider-nav--next {
+    inset-inline-end: -0.35rem;
+  }
+}
+
+.certificates-slider-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.45rem;
+}
+
+.certificates-slider-pagination .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  margin: 0 !important;
+  opacity: 1;
+  background: #cfc8bf;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.certificates-slider-pagination .swiper-pagination-bullet-active {
+  background: var(--burgundy);
+  transform: scale(1.25);
+}
+
+/* -------------------------------------------------------------------------- */
+/* Reduced motion                                                             */
+/* -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
