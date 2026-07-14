@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
 
@@ -19,6 +19,18 @@ declare global {
   }
 }
 
+function subscribeSplashDone() {
+  return () => {};
+}
+
+function getSplashDoneSnapshot() {
+  return Boolean(window.__uncleTimSplashDone);
+}
+
+function getSplashDoneServerSnapshot() {
+  return false;
+}
+
 /**
  * Full-page splash — shown only on hard open/refresh, not soft client navigations.
  */
@@ -29,16 +41,19 @@ export function PageSplashLoader({
 }) {
   const t = useTranslations("common");
   const locale = useLocale();
-  const [visible, setVisible] = useState(() => {
-    if (typeof window === "undefined") return true;
-    return !window.__uncleTimSplashDone;
-  });
+  const alreadyDone = useSyncExternalStore(
+    subscribeSplashDone,
+    getSplashDoneSnapshot,
+    getSplashDoneServerSnapshot,
+  );
+  const [sessionActive, setSessionActive] = useState(() => !alreadyDone);
   const [fading, setFading] = useState(false);
   const [progress, setProgress] = useState(0);
 
+  const visible = sessionActive && !alreadyDone;
+
   useEffect(() => {
-    if (typeof window !== "undefined" && window.__uncleTimSplashDone) {
-      setVisible(false);
+    if (alreadyDone) {
       onComplete?.();
       return;
     }
@@ -68,8 +83,8 @@ export function PageSplashLoader({
         setFading(true);
         fadeTimer = window.setTimeout(() => {
           window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-          setVisible(false);
           window.__uncleTimSplashDone = true;
+          setSessionActive(false);
           onComplete?.();
         }, FADE_MS);
       }, remaining);
@@ -87,7 +102,7 @@ export function PageSplashLoader({
       window.clearTimeout(fadeTimer);
       window.removeEventListener("load", beginExit);
     };
-  }, [onComplete]);
+  }, [alreadyDone, onComplete]);
 
   if (!visible) {
     return null;

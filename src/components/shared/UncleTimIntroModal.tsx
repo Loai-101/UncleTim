@@ -37,16 +37,12 @@ export function UncleTimIntroModal({ splashDone }: UncleTimIntroModalProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const previousFocus = useRef<HTMLElement | null>(null);
 
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    if (!splashDone) return;
-    setOpen(true);
-  }, [splashDone, locale]);
+  const [dismissedLocale, setDismissedLocale] = useState<string | null>(null);
+  const open = splashDone && dismissedLocale !== locale;
 
   const close = useCallback(() => {
-    setOpen(false);
-  }, []);
+    setDismissedLocale(locale);
+  }, [locale]);
 
   useEffect(() => {
     if (!open) return;

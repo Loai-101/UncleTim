@@ -12,12 +12,17 @@ export function useImageOrientation(
   src: string,
   fallback: ImageOrientation = "portrait",
 ): ImageOrientation {
+  const [trackedSrc, setTrackedSrc] = useState(src);
   const [orientation, setOrientation] = useState<ImageOrientation>(fallback);
+
+  // Reset when the source changes (React-recommended render-time adjustment).
+  if (src !== trackedSrc) {
+    setTrackedSrc(src);
+    setOrientation(fallback);
+  }
 
   useEffect(() => {
     let cancelled = false;
-    setOrientation(fallback);
-
     const img = new window.Image();
 
     img.onload = () => {

@@ -113,16 +113,23 @@ export function CertificatesSection() {
   const PrevIcon = rtl ? ChevronRight : ChevronLeft;
   const NextIcon = rtl ? ChevronLeft : ChevronRight;
 
-  useEffect(() => {
-    setZoom(1);
-  }, [activeIndex]);
-
   const openAt = (id: string) => {
     const index = items.findIndex((c) => c.id === id);
     if (index < 0) return;
     setActiveIndex(index);
+    setZoom(1);
     setModalOpen(true);
   };
+
+  const goPrev = useCallback(() => {
+    setActiveIndex((i) => i - 1);
+    setZoom(1);
+  }, []);
+
+  const goNext = useCallback(() => {
+    setActiveIndex((i) => i + 1);
+    setZoom(1);
+  }, []);
 
   useEffect(() => {
     if (!modalOpen) return;
@@ -149,17 +156,17 @@ export function CertificatesSection() {
       }
       if (event.key === "ArrowLeft" && activeIndex > 0) {
         event.preventDefault();
-        setActiveIndex((i) => i - 1);
+        goPrev();
       }
       if (event.key === "ArrowRight" && activeIndex < items.length - 1) {
         event.preventDefault();
-        setActiveIndex((i) => i + 1);
+        goNext();
       }
     };
 
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [modalOpen, activeIndex, items.length]);
+  }, [modalOpen, activeIndex, items.length, goPrev, goNext]);
 
   const trapFocus = useCallback((event: ReactKeyboardEvent<HTMLDivElement>) => {
     if (event.key !== "Tab" || !dialogRef.current) return;
@@ -338,7 +345,7 @@ export function CertificatesSection() {
                   <button
                     type="button"
                     disabled={activeIndex === 0}
-                    onClick={() => setActiveIndex((i) => i - 1)}
+                    onClick={goPrev}
                     className={cn(
                       "inline-flex items-center gap-1 text-[0.7rem] tracking-[0.14em] uppercase",
                       activeIndex === 0
@@ -353,7 +360,7 @@ export function CertificatesSection() {
                   <button
                     type="button"
                     disabled={activeIndex >= items.length - 1}
-                    onClick={() => setActiveIndex((i) => i + 1)}
+                    onClick={goNext}
                     className={cn(
                       "inline-flex items-center gap-1 text-[0.7rem] tracking-[0.14em] uppercase",
                       activeIndex >= items.length - 1
