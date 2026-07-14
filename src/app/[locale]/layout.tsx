@@ -121,9 +121,11 @@ export async function generateMetadata({
 
   return {
     metadataBase: new URL(siteUrl),
+    // Absolute title — use the locale metadata string as-is (browser tab + crawlers)
     title: {
+      absolute: title,
       default: title,
-      template: `%s | ${SITE_NAME}`,
+      template: `%s | ${title}`,
     },
     description,
     keywords: Array.from(new Set(keywords)),
@@ -131,7 +133,7 @@ export async function generateMetadata({
     creator: SITE_NAME,
     publisher: SITE_NAME,
     category: "Equestrian Heritage",
-    applicationName: SITE_NAME,
+    applicationName: title,
     referrer: "origin-when-cross-origin",
     robots: {
       index: true,
@@ -164,7 +166,7 @@ export async function generateMetadata({
       url: `/${locale}`,
       title: t("ogTitle"),
       description: t("ogDescription"),
-      siteName: SITE_NAME,
+      siteName: title,
       images: [
         {
           url: SEO_OG_IMAGE.url,
