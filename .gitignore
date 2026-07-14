@@ -42,6 +42,24 @@ yarn-error.log*
 # vercel
 .vercel
 
+# large / design source files not used by the site
+*.psd
+*.ai
+*.sketch
+*.fig
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+*.mp4
+*.mov
+*.webm
+*.avi
+*.raw
+*.cr2
+*.nef
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

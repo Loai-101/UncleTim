@@ -18,8 +18,6 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    // Local image-processing utilities (Node CommonJS, not app runtime)
-    "scripts/**",
   ]),
 ]);
 

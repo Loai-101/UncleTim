@@ -39,5 +39,3 @@ export const SOCIAL = {
   facebook: "#",
   youtube: "#",
 } as const;
-
-export const PLACEHOLDER_IMAGE_BASE = "/images/placeholders";
