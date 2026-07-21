@@ -19,6 +19,7 @@
   --border-gold: rgba(212, 175, 55, 0.35);
 
   --hero-height-desktop: 760px;
+  --hero-height-laptop: 600px;
   --hero-height-tablet: 560px;
   --hero-height-mobile: 420px;
 
@@ -335,6 +336,13 @@ html[lang="ar"] .font-arabic-display {
   height: var(--hero-height-desktop);
   overflow: hidden;
   position: relative;
+}
+
+/* Laptop only — slightly shorter hero; phones / tablets / large desktops unchanged */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .hero-section {
+    height: var(--hero-height-laptop);
+  }
 }
 
 @media (max-width: 1024px) {
