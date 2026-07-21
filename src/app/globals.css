@@ -108,20 +108,13 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Touch / narrow viewports use native scrolling (Lenis disabled) */
-html.native-scroll {
-  overflow-x: clip;
-  overflow-y: auto;
+/* Native scrolling — Lenis removed; do not clamp html/body height */
+html.native-scroll,
+html.native-scroll body {
   height: auto;
+  max-height: none;
   overscroll-behavior-y: auto;
   -webkit-overflow-scrolling: touch;
-}
-
-html.native-scroll body {
-  overflow-x: clip;
-  overflow-y: visible;
-  min-height: 100%;
-  touch-action: pan-y;
 }
 
 ::selection {

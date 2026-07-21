@@ -34,10 +34,11 @@ const securityHeaders = [
       "default-src 'self'",
       // React Refresh / Fast Refresh needs unsafe-eval in development only
       `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
-      "style-src 'self' 'unsafe-inline'",
+      // Google Fonts CSS (next/font is self-hosted; allow CDN for fallbacks / tooling)
+      "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "img-src 'self' data: blob: https://res.cloudinary.com",
-      "font-src 'self' data:",
-      "connect-src 'self' https://res.cloudinary.com",
+      "font-src 'self' data: https://fonts.gstatic.com",
+      "connect-src 'self' https://res.cloudinary.com https://fonts.googleapis.com https://fonts.gstatic.com",
       "media-src 'self' https://res.cloudinary.com",
       "object-src 'none'",
       "base-uri 'self'",

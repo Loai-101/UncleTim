@@ -15,6 +15,11 @@ import { createPortal } from "react-dom";
 import { LuxuryButton } from "@/components/shared/LuxuryButton";
 import { useMounted } from "@/hooks/useMounted";
 import { DURATION, EASING } from "@/lib/animations";
+import {
+  forceUnlockBodyScroll,
+  lockBodyScroll,
+  unlockBodyScroll,
+} from "@/lib/body-scroll-lock";
 import { cn } from "@/lib/utils";
 
 const INTRO_IMAGE =
@@ -42,25 +47,22 @@ export function UncleTimIntroModal({ splashDone }: UncleTimIntroModalProps) {
 
   const close = useCallback(() => {
     setDismissedLocale(locale);
+    forceUnlockBodyScroll();
   }, [locale]);
 
   useEffect(() => {
     if (!open) return;
 
     previousFocus.current = document.activeElement as HTMLElement | null;
-    const previousBody = document.body.style.overflow;
-    const previousHtml = document.documentElement.style.overflow;
-    document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden";
+    lockBodyScroll();
     const timer = window.setTimeout(() => {
       document.getElementById(continueId)?.focus();
     }, 80);
 
     return () => {
       window.clearTimeout(timer);
-      document.body.style.overflow = previousBody === "hidden" ? "" : previousBody;
-      document.documentElement.style.overflow =
-        previousHtml === "hidden" ? "" : previousHtml;
+      unlockBodyScroll();
+      forceUnlockBodyScroll();
       previousFocus.current?.focus();
     };
   }, [open, continueId]);

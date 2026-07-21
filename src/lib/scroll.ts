@@ -5,6 +5,7 @@ type LenisLike = {
     target: string | number | HTMLElement,
     options?: { offset?: number; duration?: number; immediate?: boolean },
   ) => void;
+  destroy?: () => void;
 };
 
 declare global {

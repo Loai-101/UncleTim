@@ -14,6 +14,11 @@ import {
 } from "react";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import type { AppLocale } from "@/i18n/routing";
+import {
+  forceUnlockBodyScroll,
+  lockBodyScroll,
+  unlockBodyScroll,
+} from "@/lib/body-scroll-lock";
 import { SITE_LOGO, SITE_SHORT_NAME } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -167,25 +172,19 @@ export function PageSplashLoader({
 
   useEffect(() => {
     if (alreadyDone) {
+      forceUnlockBodyScroll();
       onCompleteRef.current?.();
     }
   }, [alreadyDone]);
 
   useEffect(() => {
     if (!visible) return;
-
-    const previousBody = document.body.style.overflow;
-    const previousHtml = document.documentElement.style.overflow;
-    document.body.style.overflow = "hidden";
-    document.documentElement.style.overflow = "hidden";
-
+    lockBodyScroll();
     return () => {
-      document.body.style.overflow = previousBody;
-      document.documentElement.style.overflow = previousHtml;
-      // Ensure scroll is unlocked after splash (locale remount can leave "hidden")
-      if (!window.__uncleTimSplashDone) return;
-      document.body.style.overflow = "";
-      document.documentElement.style.overflow = "";
+      unlockBodyScroll();
+      if (window.__uncleTimSplashDone) {
+        forceUnlockBodyScroll();
+      }
     };
   }, [visible]);
 
@@ -212,8 +211,7 @@ export function PageSplashLoader({
       fadeTimer = window.setTimeout(() => {
         window.scrollTo({ top: 0, left: 0, behavior: "auto" });
         window.__uncleTimSplashDone = true;
-        document.body.style.overflow = "";
-        document.documentElement.style.overflow = "";
+        forceUnlockBodyScroll();
         setSessionActive(false);
         onCompleteRef.current?.();
       }, FADE_MS);
@@ -290,189 +288,186 @@ export function PageSplashLoader({
         className="absolute inset-0 bg-gradient-to-b from-burgundy/55 via-burgundy/45 to-burgundy/90"
       />
 
-      <div
-        className={cn(
-          "relative z-10 h-dvh max-h-dvh overflow-y-auto overscroll-y-contain",
-          "touch-pan-y [-webkit-overflow-scrolling:touch]",
-        )}
-      >
+      <div className="relative z-10 flex h-dvh max-h-dvh flex-col">
         <div
           className={cn(
-            "mx-auto flex min-h-full w-full max-w-3xl flex-col",
+            "flex min-h-0 flex-1 flex-col items-center justify-center overflow-y-auto overscroll-contain",
             "px-3 py-4 sm:px-6 sm:py-6 md:px-8",
             "pt-[max(1rem,env(safe-area-inset-top))]",
-            "pb-[max(1rem,env(safe-area-inset-bottom))]",
+            "touch-pan-y [-webkit-overflow-scrolling:touch]",
           )}
         >
-          <div className="my-auto flex w-full flex-col">
-            <div className="mb-4 flex w-full shrink-0 flex-col items-center text-center sm:mb-6 md:mb-8 [@media(max-height:640px)]:mb-3">
-              <div className="relative mb-3 size-14 overflow-hidden rounded-full border border-luxury-gold/50 bg-burgundy/40 shadow-[0_0_40px_rgba(212,175,55,0.18)] sm:mb-4 sm:size-20 md:size-24 [@media(max-height:640px)]:mb-2 [@media(max-height:640px)]:size-12">
-                <Image
-                  src={SITE_LOGO}
-                  alt={SITE_SHORT_NAME}
-                  fill
-                  priority
-                  sizes="96px"
-                  className="object-cover object-top"
-                />
-              </div>
-              <p className="mb-1.5 text-[0.65rem] tracking-[0.28em] text-luxury-gold uppercase sm:mb-2 sm:text-[0.7rem]">
-                {SITE_SHORT_NAME}
-              </p>
-              <h1
-                id={titleId}
-                className="font-display text-xl text-ivory sm:text-3xl md:text-4xl"
-              >
-                Choose your language
-              </h1>
-              <p className="mt-2 max-w-md px-2 font-arabic-body text-xs leading-relaxed text-soft-gold/85 sm:mt-3 sm:text-sm md:text-base">
-                اختر لغتك
-                <span
-                  className="mx-1.5 text-luxury-gold/40 sm:mx-2"
-                  aria-hidden="true"
-                >
-                  ·
-                </span>
-                <span className="font-body">Choisissez votre langue</span>
-              </p>
-              <div
+          <div className="mb-4 flex w-full max-w-3xl shrink-0 flex-col items-center text-center sm:mb-6 md:mb-8">
+            <div className="relative mb-3 size-14 overflow-hidden rounded-full border border-luxury-gold/50 bg-burgundy/40 shadow-[0_0_40px_rgba(212,175,55,0.18)] sm:mb-4 sm:size-20 md:size-24">
+              <Image
+                src={SITE_LOGO}
+                alt={SITE_SHORT_NAME}
+                fill
+                priority
+                sizes="96px"
+                className="object-cover object-top"
+              />
+            </div>
+            <p className="mb-1.5 text-[0.65rem] tracking-[0.28em] text-luxury-gold uppercase sm:mb-2 sm:text-[0.7rem]">
+              {SITE_SHORT_NAME}
+            </p>
+            <h1
+              id={titleId}
+              className="font-display text-xl text-ivory sm:text-3xl md:text-4xl"
+            >
+              Choose your language
+            </h1>
+            <p className="mt-2 max-w-md px-2 font-arabic-body text-xs leading-relaxed text-soft-gold/85 sm:mt-3 sm:text-sm md:text-base">
+              اختر لغتك
+              <span
+                className="mx-1.5 text-luxury-gold/40 sm:mx-2"
                 aria-hidden="true"
-                className="mt-3 h-px w-16 bg-gradient-to-r from-transparent via-luxury-gold to-transparent sm:mt-5 sm:w-24"
+              >
+                ·
+              </span>
+              <span className="font-body">Choisissez votre langue</span>
+            </p>
+            <div
+              aria-hidden="true"
+              className="mt-3 h-px w-16 bg-gradient-to-r from-transparent via-luxury-gold to-transparent sm:mt-5 sm:w-24"
+            />
+          </div>
+
+          <ul className="grid w-full max-w-3xl shrink-0 grid-cols-3 gap-2 sm:gap-3 md:gap-4">
+            {OPTIONS.map((option) => {
+              const isSelected = selected === option.locale;
+              return (
+                <li key={option.locale} className="min-w-0">
+                  <button
+                    type="button"
+                    disabled={isPending || choiceMade || fading}
+                    onClick={() => choose(option.locale)}
+                    className={cn(
+                      "group relative flex h-full w-full min-w-0 flex-col items-center overflow-hidden rounded-sm border text-center transition-all duration-300",
+                      "gap-1.5 px-1.5 py-3 sm:gap-3 sm:px-3 sm:py-5 md:gap-4 md:px-4 md:py-6",
+                      "border-luxury-gold/35 bg-ivory/[0.08] backdrop-blur-sm",
+                      "hover:border-luxury-gold hover:bg-ivory/[0.14] hover:shadow-[0_16px_40px_-20px_rgba(212,175,55,0.45)]",
+                      "active:scale-[0.98] active:border-luxury-gold/70",
+                      "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-luxury-gold focus-visible:ring-offset-2 focus-visible:ring-offset-burgundy",
+                      "disabled:cursor-wait touch-manipulation",
+                      isSelected &&
+                        "border-luxury-gold bg-ivory/[0.18] shadow-[0_16px_40px_-18px_rgba(212,175,55,0.55)]",
+                    )}
+                  >
+                    <span
+                      aria-hidden="true"
+                      className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-luxury-gold/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    />
+                    <span className="relative h-8 w-12 shrink-0 overflow-hidden rounded-sm border border-white/20 shadow-md sm:h-12 sm:w-[4.5rem] md:h-14 md:w-20">
+                      <option.Flag />
+                    </span>
+                    <span className="flex min-w-0 flex-col items-center gap-0.5 sm:gap-1">
+                      <span className="text-[0.55rem] tracking-[0.16em] text-luxury-gold uppercase sm:text-[0.65rem] sm:tracking-[0.22em]">
+                        {option.code}
+                      </span>
+                      <span
+                        className={cn(
+                          "w-full truncate text-[0.8125rem] leading-tight text-ivory sm:text-base md:text-xl",
+                          option.locale === "ar"
+                            ? "font-arabic-display"
+                            : "font-display",
+                        )}
+                      >
+                        {option.name}
+                      </span>
+                      <span
+                        className={cn(
+                          "hidden w-full truncate text-[0.65rem] text-soft-gold/70 sm:block sm:text-xs",
+                          option.locale === "ar"
+                            ? "font-arabic-body"
+                            : "font-body",
+                        )}
+                      >
+                        {option.region}
+                      </span>
+                    </span>
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+
+        <div
+          className={cn(
+            "shrink-0 transition-opacity duration-500",
+            "px-3 pb-[max(1rem,env(safe-area-inset-bottom))] pt-2",
+            "sm:px-6 sm:pb-8 sm:pt-3 md:px-10 lg:px-16 lg:pb-12",
+            choiceMade ? "opacity-100" : "opacity-40",
+          )}
+        >
+          <div className="mx-auto w-full max-w-3xl">
+            <div className="mb-2 flex items-end justify-between gap-3 sm:mb-3 sm:gap-4">
+              <p className="font-body text-[0.6rem] tracking-[0.18em] text-luxury-gold uppercase sm:text-[0.7rem] sm:tracking-[0.22em]">
+                Loading
+              </p>
+              <p
+                className="font-display text-xs tabular-nums text-soft-gold sm:text-sm"
+                aria-live="polite"
+              >
+                {progress}%
+              </p>
+            </div>
+
+            <div
+              role="progressbar"
+              aria-valuemin={0}
+              aria-valuemax={100}
+              aria-valuenow={progress}
+              aria-label="Loading"
+              className="relative h-[2px] overflow-hidden bg-luxury-gold/25"
+            >
+              <div
+                className="absolute inset-y-0 left-0 bg-gradient-to-r from-dark-gold via-luxury-gold to-soft-gold transition-[width] duration-150 ease-out"
+                style={{ width: `${progress}%` }}
+              />
+              <span
+                aria-hidden="true"
+                className="absolute top-1/2 size-2 -translate-y-1/2 rounded-full bg-soft-gold shadow-[0_0_12px_rgba(232,207,122,0.8)]"
+                style={{
+                  left: `calc(${progress}% - 4px)`,
+                }}
               />
             </div>
 
-            <ul className="grid w-full shrink-0 grid-cols-3 gap-2 sm:gap-3 md:gap-4">
-              {OPTIONS.map((option) => {
-                const isSelected = selected === option.locale;
+            <ol className="mt-3 flex justify-between gap-0.5 sm:mt-4 sm:gap-1">
+              {TIMELINE_MARKERS.map((marker, index) => {
+                const threshold =
+                  (index / (TIMELINE_MARKERS.length - 1)) * 100;
+                const active = progress >= threshold;
                 return (
-                  <li key={option.locale} className="min-w-0">
-                    <button
-                      type="button"
-                      disabled={isPending || choiceMade || fading}
-                      onClick={() => choose(option.locale)}
+                  <li
+                    key={marker}
+                    className={cn(
+                      "flex min-w-0 flex-col items-center gap-1 sm:gap-1.5",
+                      index === 0 && "items-start",
+                      index === TIMELINE_MARKERS.length - 1 && "items-end",
+                    )}
+                  >
+                    <span
+                      aria-hidden="true"
                       className={cn(
-                        "group relative flex h-full w-full min-w-0 flex-col items-center overflow-hidden rounded-sm border text-center transition-all duration-300",
-                        "gap-1.5 px-1.5 py-3 sm:gap-3 sm:px-3 sm:py-5 md:gap-4 md:px-4 md:py-6",
-                        "border-luxury-gold/35 bg-ivory/[0.08] backdrop-blur-sm",
-                        "hover:border-luxury-gold hover:bg-ivory/[0.14] hover:shadow-[0_16px_40px_-20px_rgba(212,175,55,0.45)]",
-                        "active:scale-[0.98] active:border-luxury-gold/70",
-                        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-luxury-gold focus-visible:ring-offset-2 focus-visible:ring-offset-burgundy",
-                        "disabled:cursor-wait touch-manipulation",
-                        isSelected &&
-                          "border-luxury-gold bg-ivory/[0.18] shadow-[0_16px_40px_-18px_rgba(212,175,55,0.55)]",
+                        "size-1.5 rounded-full transition-colors duration-300",
+                        active ? "bg-luxury-gold" : "bg-luxury-gold/30",
+                      )}
+                    />
+                    <span
+                      className={cn(
+                        "font-display text-[0.55rem] tracking-[0.04em] transition-colors duration-300 sm:text-[0.65rem] sm:tracking-[0.08em] md:text-xs",
+                        active ? "text-soft-gold" : "text-soft-gold/40",
                       )}
                     >
-                      <span
-                        aria-hidden="true"
-                        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-luxury-gold/70 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                      />
-                      <span className="relative h-8 w-12 shrink-0 overflow-hidden rounded-sm border border-white/20 shadow-md sm:h-12 sm:w-[4.5rem] md:h-14 md:w-20">
-                        <option.Flag />
-                      </span>
-                      <span className="flex min-w-0 flex-col items-center gap-0.5 sm:gap-1">
-                        <span className="text-[0.55rem] tracking-[0.16em] text-luxury-gold uppercase sm:text-[0.65rem] sm:tracking-[0.22em]">
-                          {option.code}
-                        </span>
-                        <span
-                          className={cn(
-                            "w-full truncate text-[0.8125rem] leading-tight text-ivory sm:text-base md:text-xl",
-                            option.locale === "ar"
-                              ? "font-arabic-display"
-                              : "font-display",
-                          )}
-                        >
-                          {option.name}
-                        </span>
-                        <span
-                          className={cn(
-                            "hidden w-full truncate text-[0.65rem] text-soft-gold/70 sm:block sm:text-xs",
-                            option.locale === "ar"
-                              ? "font-arabic-body"
-                              : "font-body",
-                          )}
-                        >
-                          {option.region}
-                        </span>
-                      </span>
-                    </button>
+                      {marker}
+                    </span>
                   </li>
                 );
               })}
-            </ul>
-
-            <div
-              className={cn(
-                "mt-6 w-full shrink-0 transition-opacity duration-500 sm:mt-8",
-                choiceMade ? "opacity-100" : "opacity-40",
-              )}
-            >
-              <div className="mb-2 flex items-end justify-between gap-3 sm:mb-3 sm:gap-4">
-                <p className="font-body text-[0.6rem] tracking-[0.18em] text-luxury-gold uppercase sm:text-[0.7rem] sm:tracking-[0.22em]">
-                  Loading
-                </p>
-                <p
-                  className="font-display text-xs tabular-nums text-soft-gold sm:text-sm"
-                  aria-live="polite"
-                >
-                  {progress}%
-                </p>
-              </div>
-
-              <div
-                role="progressbar"
-                aria-valuemin={0}
-                aria-valuemax={100}
-                aria-valuenow={progress}
-                aria-label="Loading"
-                className="relative h-[2px] overflow-hidden bg-luxury-gold/25"
-              >
-                <div
-                  className="absolute inset-y-0 left-0 bg-gradient-to-r from-dark-gold via-luxury-gold to-soft-gold transition-[width] duration-150 ease-out"
-                  style={{ width: `${progress}%` }}
-                />
-                <span
-                  aria-hidden="true"
-                  className="absolute top-1/2 size-2 -translate-y-1/2 rounded-full bg-soft-gold shadow-[0_0_12px_rgba(232,207,122,0.8)]"
-                  style={{
-                    left: `calc(${progress}% - 4px)`,
-                  }}
-                />
-              </div>
-
-              <ol className="mt-3 flex justify-between gap-0.5 sm:mt-4 sm:gap-1">
-                {TIMELINE_MARKERS.map((marker, index) => {
-                  const threshold =
-                    (index / (TIMELINE_MARKERS.length - 1)) * 100;
-                  const active = progress >= threshold;
-                  return (
-                    <li
-                      key={marker}
-                      className={cn(
-                        "flex min-w-0 flex-col items-center gap-1 sm:gap-1.5",
-                        index === 0 && "items-start",
-                        index === TIMELINE_MARKERS.length - 1 && "items-end",
-                      )}
-                    >
-                      <span
-                        aria-hidden="true"
-                        className={cn(
-                          "size-1.5 rounded-full transition-colors duration-300",
-                          active ? "bg-luxury-gold" : "bg-luxury-gold/30",
-                        )}
-                      />
-                      <span
-                        className={cn(
-                          "font-display text-[0.55rem] tracking-[0.04em] transition-colors duration-300 sm:text-[0.65rem] sm:tracking-[0.08em] md:text-xs",
-                          active ? "text-soft-gold" : "text-soft-gold/40",
-                        )}
-                      >
-                        {marker}
-                      </span>
-                    </li>
-                  );
-                })}
-              </ol>
-            </div>
+            </ol>
           </div>
         </div>
       </div>
