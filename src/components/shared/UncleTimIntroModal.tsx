@@ -48,15 +48,19 @@ export function UncleTimIntroModal({ splashDone }: UncleTimIntroModalProps) {
     if (!open) return;
 
     previousFocus.current = document.activeElement as HTMLElement | null;
-    const previousOverflow = document.body.style.overflow;
+    const previousBody = document.body.style.overflow;
+    const previousHtml = document.documentElement.style.overflow;
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
     const timer = window.setTimeout(() => {
       document.getElementById(continueId)?.focus();
     }, 80);
 
     return () => {
       window.clearTimeout(timer);
-      document.body.style.overflow = previousOverflow;
+      document.body.style.overflow = previousBody === "hidden" ? "" : previousBody;
+      document.documentElement.style.overflow =
+        previousHtml === "hidden" ? "" : previousHtml;
       previousFocus.current?.focus();
     };
   }, [open, continueId]);

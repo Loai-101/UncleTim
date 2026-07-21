@@ -9,16 +9,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 export type LenisCleanup = () => void;
 
+/** Prefer native scrolling on phones/tablets — Lenis often blocks touch scroll. */
+function shouldUseNativeScroll(): boolean {
+  if (typeof window === "undefined") return true;
+  return (
+    window.matchMedia("(pointer: coarse)").matches ||
+    window.matchMedia("(max-width: 1024px)").matches
+  );
+}
+
 /**
  * Initializes Lenis smooth scrolling synced with GSAP ScrollTrigger.
- * Respects prefers-reduced-motion and returns a cleanup function.
+ * Uses native scroll on touch / narrow viewports. Respects prefers-reduced-motion.
  */
 export function initLenis(): LenisCleanup {
   if (typeof window === "undefined") {
     return () => undefined;
   }
 
-  // Always open/refresh at the top of the page
   if ("scrollRestoration" in window.history) {
     window.history.scrollRestoration = "manual";
   }
@@ -28,9 +36,12 @@ export function initLenis(): LenisCleanup {
     "(prefers-reduced-motion: reduce)",
   ).matches;
 
-  if (prefersReduced) {
+  if (prefersReduced || shouldUseNativeScroll()) {
+    document.documentElement.classList.add("native-scroll");
     ScrollTrigger.refresh();
-    return () => undefined;
+    return () => {
+      document.documentElement.classList.remove("native-scroll");
+    };
   }
 
   const lenis = new Lenis({

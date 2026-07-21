@@ -20,13 +20,8 @@ export function SmoothScrollProvider({
       window.history.scrollRestoration = "manual";
     }
 
-    const resetTop = () => {
-      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
-    };
-
-    resetTop();
-    window.addEventListener("pageshow", resetTop);
-    return () => window.removeEventListener("pageshow", resetTop);
+    // Only force top on first mount — do not fight phone scroll / bfcache return
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, []);
 
   return children;
