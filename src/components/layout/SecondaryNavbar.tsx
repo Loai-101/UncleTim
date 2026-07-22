@@ -7,6 +7,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { MobileMenu } from "@/components/layout/MobileMenu";
 import { secondaryNavigationItems } from "@/data/navigation";
 import { useActiveSection } from "@/hooks/useActiveSection";
+import { forceUnlockBodyScroll } from "@/lib/body-scroll-lock";
 import { SITE_LOGO, SITE_SHORT_NAME } from "@/lib/constants";
 import { scrollToSection } from "@/lib/scroll";
 import { cn } from "@/lib/utils";
@@ -57,15 +58,6 @@ export function SecondaryNavbar({ className }: SecondaryNavbarProps) {
 
     document.addEventListener("keydown", onKeyDown);
     return () => document.removeEventListener("keydown", onKeyDown);
-  }, [menuOpen]);
-
-  useEffect(() => {
-    if (!menuOpen) return;
-    const previous = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = previous;
-    };
   }, [menuOpen]);
 
   return (
@@ -157,7 +149,11 @@ export function SecondaryNavbar({ className }: SecondaryNavbarProps) {
       <div id="mobile-menu">
         <MobileMenu
           open={menuOpen}
-          onClose={() => setMenuOpen(false)}
+          onClose={() => {
+            setMenuOpen(false);
+            // Ensure page scroll works after closing the menu (X or backdrop)
+            forceUnlockBodyScroll();
+          }}
           activeSectionId={activeSectionId}
           onNavigate={scrollToSection}
           items={secondaryNavigationItems}

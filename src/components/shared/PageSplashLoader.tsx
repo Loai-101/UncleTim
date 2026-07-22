@@ -190,7 +190,7 @@ export function PageSplashLoader({
 
   /** Same timeline animation for AR / EN / FR (survives locale remount). */
   useEffect(() => {
-    if (!choiceMade || fading || alreadyDone) return;
+    if (!choiceMade || alreadyDone || exitingRef.current) return;
 
     if (!window.__uncleTimSplashLoadStarted) {
       window.__uncleTimSplashLoadStarted = Date.now();
@@ -218,6 +218,7 @@ export function PageSplashLoader({
     };
 
     const tick = () => {
+      if (exitingRef.current) return;
       const elapsed = Date.now() - started;
       const next = Math.min(100, Math.round((elapsed / LOAD_DURATION_MS) * 100));
       setProgress(next);
@@ -233,9 +234,15 @@ export function PageSplashLoader({
 
     return () => {
       window.cancelAnimationFrame(raf);
-      window.clearTimeout(fadeTimer);
+      // Do not clear fadeTimer once exit has started — that was cancelling onComplete
+      // and preventing the "Why Uncle Tim" intro from opening.
+      if (!exitingRef.current) {
+        window.clearTimeout(fadeTimer);
+      }
     };
-  }, [alreadyDone, choiceMade, fading]);
+    // `fading` must NOT be a dependency — setFading(true) inside finish() would
+    // re-run this effect, clear the completion timeout, and skip the intro modal.
+  }, [alreadyDone, choiceMade]);
 
   const choose = useCallback(
     (next: AppLocale) => {

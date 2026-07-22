@@ -109,7 +109,7 @@ export function UncleTimIntroModal({ splashDone }: UncleTimIntroModalProps) {
   return createPortal(
     <AnimatePresence>
       {open ? (
-        <div className="fixed inset-0 z-[9000] flex items-center justify-center p-3 sm:p-6 lg:p-8">
+        <div className="fixed inset-0 z-[10001] flex items-center justify-center p-3 sm:p-6 lg:p-8">
           <motion.button
             type="button"
             aria-label={t("continue")}

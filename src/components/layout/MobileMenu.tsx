@@ -13,6 +13,11 @@ import {
 import { LanguageSwitcher } from "@/components/layout/LanguageSwitcher";
 import { navigationItems } from "@/data/navigation";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import {
+  forceUnlockBodyScroll,
+  lockBodyScroll,
+  unlockBodyScroll,
+} from "@/lib/body-scroll-lock";
 import { CONTACT, SITE_MONOGRAM } from "@/lib/constants";
 import { DURATION, EASING } from "@/lib/animations";
 import { cn } from "@/lib/utils";
@@ -49,19 +54,25 @@ export function MobileMenu({
 
   const handleNavigate = useCallback(
     (sectionId: string) => {
-      onNavigate?.(sectionId);
+      // Unlock before closing so scroll is free when we jump to the section
+      forceUnlockBodyScroll();
       onClose();
+      // Defer scroll until after menu unmount / overflow restore
+      window.requestAnimationFrame(() => {
+        forceUnlockBodyScroll();
+        onNavigate?.(sectionId);
+      });
     },
     [onClose, onNavigate],
   );
 
-  // Body scroll lock
+  // Body scroll lock while menu is open
   useEffect(() => {
     if (!open) return;
-    const previous = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    lockBodyScroll();
     return () => {
-      document.body.style.overflow = previous;
+      unlockBodyScroll();
+      forceUnlockBodyScroll();
     };
   }, [open]);
 
